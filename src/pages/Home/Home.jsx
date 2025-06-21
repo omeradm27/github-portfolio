@@ -20,7 +20,7 @@ const projectsData = [
       ],
       technologies: ['.NET Core', 'Node.js', 'Vue.js', 'Redis', 'RabbitMQ'],
       live: 'https://felixo.com',
-      logo: '/assets/felixo.png'
+      logo: '/assets/Felixo.png'
     },
     {
       title: t('PROJECTS_ZEROWASTEGPT_TITLE'),
@@ -31,7 +31,7 @@ const projectsData = [
       ],
       technologies: ['Next.js', 'Redis', 'Vercel', 'OpenAI GPT-4'],
       live: 'https://zerowastegpt.org/',
-      logo: '/assets/ZeroWasteGPT.png'
+      logo: '/assets/ZerowasteGPT.png'
     },
     {
       title: t('PROJECTS_EASYCRM_TITLE'),

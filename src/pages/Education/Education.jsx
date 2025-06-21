@@ -26,7 +26,7 @@ const Education = () => {
       institution: t('EDUCATION_ENTRY_2_INSTITUTION'),
       period: t('EDUCATION_ENTRY_2_PERIOD'),
       location: t('EDUCATION_ENTRY_2_LOCATION'),
-      logo: "/assets/Ankara_Üniversitesi_logo.png",
+      logo: "/assets/Ankara_University_logo.png",
       link: "https://comp.eng.ankara.edu.tr/"
     },
   ]
