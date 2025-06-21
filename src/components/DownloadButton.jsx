@@ -14,7 +14,7 @@ const DownloadButton = ({ cv }) => {
             href={cv}
             download
             type='primary'
-            color="cyan"
+            color="207adb"
             icon={<DownloadOutlined />}
             size="large"
             variant='solid'
