@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://omeradm27.github.io/",
+  "homepage": "https://omeradm27.github.io/github-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
