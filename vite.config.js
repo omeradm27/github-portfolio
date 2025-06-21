@@ -7,3 +7,4 @@ import tailwindcss from 'vite-plugin-windicss';
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 });
+
