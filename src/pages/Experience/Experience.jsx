@@ -1,4 +1,3 @@
-// src/components/Experience.jsx
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
@@ -10,7 +9,6 @@ const { Title } = Typography
 const Experience = () => {
   const { t } = useTranslation()
 
-  // Build the array from your flat translation keys
   const experienceData = [
     {
       role: t('EXPERIENCE_ENTRY_1_ROLE'),
@@ -65,14 +63,36 @@ const Experience = () => {
           </Title>
         </Flex>
 
-        <Timeline mode="alternate" className="experience__timeline">
+        {/* MASAÜSTÜ */}
+        <div className="experience__timeline desktop-only">
+          <Timeline mode="alternate">
+            {experienceData.map((item, idx) => (
+              <Timeline.Item
+                key={idx}
+                label={<span className="experience__period">{item.period}</span>}
+                dot={<span className="experience__dot" />}
+              >
+                <Card className="experience__card">
+                  <h3 className="experience__role">{item.role}</h3>
+                  <p className="experience__company">{item.company}</p>
+                  <p className="experience__location">{item.location}</p>
+                  <ul className="experience__details">
+                    {item.details.map((line, i) => (
+                      <li key={i} className="experience__details-item">{line}</li>
+                    ))}
+                  </ul>
+                </Card>
+              </Timeline.Item>
+            ))}
+          </Timeline>
+        </div>
+
+        {/* MOBİL */}
+        <div className="experience__mobile mobile-only">
           {experienceData.map((item, idx) => (
-            <Timeline.Item
-              key={idx}
-              label={<span className="experience__period">{item.period}</span>}
-              dot={<span className="experience__dot" />}
-            >
-              <Card className="experience__card" >
+            <div key={idx} className="experience__mobile-item">
+              <span className="experience__period">{item.period}</span>
+              <Card className="experience__card">
                 <h3 className="experience__role">{item.role}</h3>
                 <p className="experience__company">{item.company}</p>
                 <p className="experience__location">{item.location}</p>
@@ -82,9 +102,9 @@ const Experience = () => {
                   ))}
                 </ul>
               </Card>
-            </Timeline.Item>
+            </div>
           ))}
-        </Timeline>
+        </div>
       </Card>
     </motion.section>
   )

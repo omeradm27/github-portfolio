@@ -10,14 +10,16 @@
 
 .aboutCard {
   display: flex;
-  min-width:170px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  min-width: 160px;
+  text-align: center;
   background: var(--bg-alt, #fff);
   border-radius: var(--radius, 1rem);
   box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.1));
-  text-align: center;
-  margin-bottom: 2rem;
+
 }
 
 .about__title {
@@ -38,7 +40,7 @@
   display: block;     /* ensure it respects width */
   margin: 0 auto;     /* center it */
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .about__title {
     font-size: 1.75rem;
   }
@@ -49,5 +51,9 @@
 
   .about__description {
     font-size: 0.95rem;
+  }
+  .ant-space {
+    flex-direction: column !important;
+    align-items: center;
   }
 }

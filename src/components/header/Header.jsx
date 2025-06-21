@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaHome, FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope } from 'react-icons/fa';
 import LanguageSelector from './../LanguageSelector';
 import './Header.css';
 
 const Header = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+  const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,13 +24,29 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    if (open) document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [open]);
+
   return (
     <header className="header">
       <nav className="nav container">
-        <NavLink to="/" className="nav__logo">
-          <img src='/assets/logo.png' alt="Ömer Çetinadam" className='logo'/>
-        </NavLink>
-        <div className={open ? 'nav__menu show-menu' : 'nav__menu'}>
+        <div className="nav__mobile-wrapper">
+          <NavLink to="/" className="nav__logo">
+            <img src='/assets/logo.png' alt="Ömer Çetinadam" className='logo' />
+          </NavLink>
+          <div className="nav__actions">
+            {isMobile && <LanguageSelector />}
+            <button className="nav__toggle" onClick={() => setOpen(!open)}>☰</button>
+          </div>
+        </div>
+        <div ref={menuRef} className={open ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className="nav__list">
             {[
               { key: 'about', label: t('HEADER_ABOUT'), icon: <FaUser /> },
@@ -45,15 +63,13 @@ const Header = () => {
                   onClick={() => setOpen(false)}
                 >
                   <span className="nav__icon">{icon}</span>
-                  <span  className="nav__icon">{t(label)}</span>
+                  <span className="nav__icon">{t(label)}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
-          <button className="nav__close" onClick={() => setOpen(false)}>×</button>
         </div>
-        <button className="nav__toggle" onClick={() => setOpen(!open)}>☰</button>
-        <LanguageSelector />
+        {!isMobile && <LanguageSelector />}
       </nav>
     </header>
   );
