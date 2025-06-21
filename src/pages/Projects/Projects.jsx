@@ -153,7 +153,7 @@ export default function Projects() {
                     href={proj.live}
 
                     target="_blank"
-                    style={{ paddingTop: '0.2rem',color:proj.live ? 'white':'gray' }}
+                    style={{ paddingTop: '0.2rem' ,color:proj.live ? 'white':'gray' }}
                   >
                     {t('PROJECTS_LIVE')}
                   </Button>,
@@ -164,7 +164,7 @@ export default function Projects() {
                     icon={<GithubOutlined />}
                     href={proj.github}
                     target="_blank"
-                    style={{ paddingTop: '0.2rem' }}
+                    style={{ paddingTop: '0.2rem',color:proj.github ? 'white':'gray' }}
                   >
                     {t('PROJECTS_CODE')}
                   </Button>,
