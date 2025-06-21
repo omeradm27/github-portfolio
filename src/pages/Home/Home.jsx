@@ -8,7 +8,7 @@ import About from '../About/About'
 import Education from '../Education/Education'
 import Experience from '../Experience/Experience'
 import Skills from '../Skills/Skills'
-// import Contact from '../Contact/Contact'
+import Contact from '../Contact/Contact'
 import Projects from '../Projects/Projects'
 
 const sectionVariants = {
@@ -117,7 +117,7 @@ const Home = () => {
     { id: 'experience', Component: Experience },
     { id: 'projects', Component: Projects },
     { id: 'skills', Component: Skills },
-    // { id: 'contact', Component: Contact }
+    { id: 'contact', Component: Contact }
   ]
 
   return (

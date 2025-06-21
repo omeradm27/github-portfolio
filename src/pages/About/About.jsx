@@ -61,7 +61,7 @@ const About = () => {
             {t('ABOUT_PROFILE')}
           </Text>
         </div>
-        <DownloadButton cv={"/src/assets/Ömer_Çetinadam_Resume.pdf"} />
+        <DownloadButton cv={"/github-portfolio/assets/Ömer_Çetinadam_Resume.pdf"} />
       </Card>
     </motion.section>
   )
