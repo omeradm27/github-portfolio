@@ -48,7 +48,6 @@ const frontendCI = [
   { name: 'Redux', icon: <SiRedux size={32} /> },
   { name: 'VueJS', icon: <SiVuedotjs size={32} /> },
   { name: 'NextJS', icon: <SiNextdotjs size={32} /> },
-  { name: 'Laravel', icon: <SiLaravel size={32} /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={32} /> },
   { name: 'Windmill UI', icon: <SiWindicss size={32} /> },
   { name: 'Antdesign', icon: <SiAntdesign size={32} /> },
