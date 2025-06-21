@@ -29,7 +29,7 @@ function AnimatedRoutes() {
   const location = useLocation();
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Home />} />
+      <Route path="/github-portfolio" element={<Home />} />
     </Routes>
   );
 }
