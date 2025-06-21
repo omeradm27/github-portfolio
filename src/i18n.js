@@ -9,7 +9,7 @@ i18n
     lng: 'en',
     fallbackLng: 'en',
     backend: {
-      loadPath: import.meta.env.VITE_BASE_URL + '/locales/{{lng}}.json', // Vite ile BASE_URL kullanıyoruz
+      loadPath: '/locales/{{lng}}.json', 
     },
     interpolation: { escapeValue: false },
   });
