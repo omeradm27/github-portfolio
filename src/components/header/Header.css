@@ -1,0 +1,194 @@
+/* Header sabit pozisyonda üstte olacak şekilde stil veriyoruz */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  transition: 0.3s;
+  top: 0;
+}
+
+/* Bununla birlikte header'ın altındaki içerik kısmı kaymasın diye padding-top ekliyoruz */
+body {
+  padding-top: 120px; /* Header'ın yüksekliği kadar boşluk bırakıyoruz */
+}
+
+/* Logo ve menü düzeni */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo */
+.nav__logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Menü liste düzeni */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* Menü öğeleri */
+.nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Menü öğelerine hover efekti */
+.nav__link:hover {
+  color: #007bff;
+}
+
+.nav__icon {
+  font-size: 1.1rem;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Aktif link vurgulama */
+.active-link .nav__icon,
+.nav__link:hover .nav__icon {
+  color: #007bff;
+}
+
+/* Hamburger menü (mobilde) */
+.nav__toggle {
+  font-size: 2rem;
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Mobilde menü kapalı iken */
+.nav__menu {
+  display: flex;
+}
+
+/* Menü açıldığında görünür */
+.show-menu {
+  display: block;
+}
+
+.nav__close {
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Menü öğeleri mobilde gizlenir */
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Menü açıldığında göster */
+  .nav__menu.show-menu .nav__list {
+    display: flex;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__close {
+    display: block;
+  }
+}
+
+/* Dil Seçici */
+.lang-selector {
+  position: relative;
+  display: inline-block;
+  z-index: 1100; /* Menüden daha yüksek z-index */
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.lang-btn:focus {
+  outline: none;
+}
+
+.lang-selector button {
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Dropdown Menüsü */
+.lang-selector .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 100;
+  width: 120px;
+}
+
+/* Dil seçenekleri */
+.lang-selector .lang-option {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.lang-selector .lang-option:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.lang-selector .lang-option:focus {
+  outline: none;
+}
+.logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px #A6CBF5;
+}

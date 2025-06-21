@@ -1,0 +1,22 @@
+.app__footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer__social a {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer__social a:hover {
+  color: var(--primary-color);
+}
+
+.footer__copyright {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}

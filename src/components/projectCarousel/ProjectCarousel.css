@@ -1,0 +1,48 @@
+.carousel__section {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 4rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.carousel__image {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.carousel__footer {
+  margin-top: 1.5rem;
+}
+
+/* Custom Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.carousel-arrow.left {
+  left: -4rem;
+}
+
+.carousel-arrow.right {
+  right: -4rem;
+}
+
+.carousel-arrow:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}

@@ -1,0 +1,104 @@
+.lang-selector {
+  position: relative;
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.lang-btn {
+  background-color: #fff;
+  border: 2px solid #ddd; /* Light border for the button */
+  border-radius: 30px; /* Slightly larger border radius for a more rounded button */
+  padding: 0.5rem 1rem; /* Adjusted padding for better fit */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth transition */
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: auto; /* Allow the button width to adapt based on content */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.lang-btn:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.lang-btn .arrow {
+  font-size: 1.25rem;
+  color: #007bff; /* Matching color with border */
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover .arrow {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+/* Dropdown menu */
+.lang-selector .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 150px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lang-selector .dropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Language options */
+.lang-selector .lang-option {
+  padding: 0.75rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.lang-selector .lang-option:hover {
+  background-color: #007bff; /* Hover effect */
+  color: #fff;
+}
+
+.lang-selector .lang-option:focus {
+  outline: none;
+}
+
+.lang-selector .lang-option img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile View - Adjust dropdown and button */
+@media screen and (max-width: 768px) {
+  .lang-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .lang-selector .dropdown {
+    width: 130px;
+  }
+}
