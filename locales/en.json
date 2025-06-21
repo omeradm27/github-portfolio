@@ -117,6 +117,9 @@
   "PROJECTS_LIBRARY_DETAILS_2": "Integration with backend API",
   "PROJECTS_LIBRARY_DETAILS_3": "Borrowing & returning books functionality",
   "PROJECTS_LIBRARY_DETAILS_4": "Environment-based API setup (local/remote)",
+  "PROJECTS_LIVE": "Live",
+  "PROJECTS_CODE": "Code",
+  "PROJECTS_DETAIL": "Details",
   "CONTACT_HEADER": "Get In Touch",
   "CONTACT_TALK_TO_ME": "Talk to me",
   "CONTACT_WRITE_TO_ME": "Write to me",
@@ -136,5 +139,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha expired",
   "PROJECTS_CAROUSEL_TITLE": "Featured Projects",
   "VIEW_ALL_PROJECTS": "View All Projects",
-  "FOOTER_COPYRIGHT": "Tüm Hakları Saklıdır. © 2023 Omer Cetinadam. "
+  "FOOTER_COPYRIGHT": "All rights reserved. © 2023 Omer Cetinadam."
 }
