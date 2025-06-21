@@ -1,40 +1,51 @@
 .lang-selector {
   position: relative;
   display: inline-block;
-  margin-right: 3rem;
+  margin-right: 2rem;
+
 }
 
 .lang-btn {
   background-color: #fff;
-  border: 2px solid #ddd; /* Light border for the button */
-  border-radius: 30px; /* Slightly larger border radius for a more rounded button */
-  padding: 0.5rem 1rem; /* Adjusted padding for better fit */
+  border: 2px solid #ddd;
+  /* Light border for the button */
+  border-radius: 30px;
+  /* Slightly larger border radius for a more rounded button */
+  padding: 0.5rem 1rem;
+  /* Adjusted padding for better fit */
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease;
+  /* Smooth transition */
   color: #333;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  width: auto; /* Allow the button width to adapt based on content */
-  white-space: nowrap; /* Prevent text from wrapping */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  width: auto;
+  /* Allow the button width to adapt based on content */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
 }
 
 .lang-btn:hover {
   background-color: #f1f1f1;
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
+  /* Slight zoom effect */
 }
 
 .lang-btn .arrow {
   font-size: 1.25rem;
-  color: #007bff; /* Matching color with border */
+  color: #007bff;
+  /* Matching color with border */
   transition: color 0.3s ease;
 }
 
 .lang-btn:hover .arrow {
-  color: #0056b3; /* Darker shade on hover */
+  color: #0056b3;
+  /* Darker shade on hover */
 }
 
 /* Dropdown menu */
@@ -78,7 +89,8 @@
 }
 
 .lang-selector .lang-option:hover {
-  background-color: #007bff; /* Hover effect */
+  background-color: #007bff;
+  /* Hover effect */
   color: #fff;
 }
 
@@ -98,7 +110,11 @@
     padding: 0.4rem 0.8rem;
   }
 
-  .lang-selector .dropdown {
+  .dropdown {
     width: 130px;
+  }
+
+  .lang-selector {
+    margin-right: 0;
   }
 }

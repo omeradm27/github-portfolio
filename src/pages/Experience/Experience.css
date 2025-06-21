@@ -90,4 +90,38 @@
 .ant-timeline-item-label{
   top: 38% !important;              /* move label to mid-height of the item */
   transform: translateY(-38%) !important; /* center it exactly */
+}/* Yeni görünürlük kontrolleri */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+/* Mobil uyumlu görünüm */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .experience__container {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .experience__card {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .experience__period {
+    margin-left: 0.25rem;
+  }
 }

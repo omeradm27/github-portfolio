@@ -20,7 +20,7 @@ const projectsData = [
       ],
       technologies: ['.NET Core', 'Node.js', 'Vue.js', 'Redis', 'RabbitMQ'],
       live: 'https://felixo.com',
-      logo: '/src/assets/felixo.png'
+      logo: '/assets/Felixo.png'
     },
     {
       title: t('PROJECTS_ZEROWASTEGPT_TITLE'),
@@ -31,7 +31,7 @@ const projectsData = [
       ],
       technologies: ['Next.js', 'Redis', 'Vercel', 'OpenAI GPT-4'],
       live: 'https://zerowastegpt.org/',
-      logo: '/src/assets/ZeroWasteGPT.png'
+      logo: '/assets/ZerowasteGPT.png'
     },
     {
       title: t('PROJECTS_EASYCRM_TITLE'),
@@ -42,7 +42,7 @@ const projectsData = [
       ],
       technologies: ['React', 'TypeScript', 'Prisma', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
       live: 'https://crm-test-frontend.vercel.app/',
-      logo: '/src/assets/Easy_Crm.png'
+      logo: '/assets/Easy_Crm.png'
     },
     {
       title: t('PROJECTS_PERSIY_TITLE'),
@@ -56,7 +56,7 @@ const projectsData = [
       technologies: ['React', 'Redux', 'Next.js', 'Prisma', 'PostgreSQL', 'GitHub Actions', 'Vercel'],
       github: 'https://github.com/yourusername/persiy',
       live: 'https://persiy-frontend.vercel.app/',
-      logo: '/src/assets/Persiy.png'
+      logo: '/assets/Persiy.png'
     },
     {
       title: t('PROJECTS_VARTUR_TITLE'),
@@ -70,7 +70,7 @@ const projectsData = [
       ],
       technologies: ['PHP', 'Laravel', 'Vue.js', 'Prisma', 'Docker', 'Redis', 'RabbitMQ', 'MongoDB', 'MySQL'],
       live: 'http://vartur.com/',
-      logo: '/src/assets/Vartur.png'
+      logo: '/assets/Vartur.png'
     },
     {
       title: t('PROJECTS_RASOFT_TITLE'),
@@ -83,7 +83,7 @@ const projectsData = [
       ],
       technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL'],
       live: 'https://pys.rasoft.com.tr/',
-      logo: '/src/assets/Rasoft_PYS.png'
+      logo: '/assets/Rasoft_PYS.png'
     },
     {
       title: t('PROJECTS_LIBRARY_TITLE'),
@@ -96,7 +96,7 @@ const projectsData = [
       technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'TypeScript'],
       live: 'https://library-app-web.vercel.app/',
       github: 'https://github.com/omeradm27/library-app-web',
-      logo: '/src/assets/libraryApp.png'
+      logo: '/assets/libraryApp.png'
     }
   ]
   return (
@@ -132,7 +132,7 @@ const projectsData = [
         {/* Right side: Profile Image */}
         <div className="home__right flex justify-center items-center flex-1">
           <div className="home__img w-40 h-40 rounded-full shadow-xl bg-cover bg-center"
-            style={{ backgroundImage: 'url("/src/assets/profile.jpg")' }}>
+            style={{ backgroundImage: 'url("/assets/profile.jpg")' }}>
           </div>
         </div>
 

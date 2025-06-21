@@ -17,7 +17,7 @@ const Education = () => {
       institution: t('EDUCATION_ENTRY_1_INSTITUTION'),
       period: t('EDUCATION_ENTRY_1_PERIOD'),
       location: t('EDUCATION_ENTRY_1_LOCATION'),
-      logo: "/src/assets/ikhal.png",
+      logo: "/assets/ikhal.png",
       link: "https://ikhal.meb.k12.tr/"
     },
     {
@@ -26,7 +26,7 @@ const Education = () => {
       institution: t('EDUCATION_ENTRY_2_INSTITUTION'),
       period: t('EDUCATION_ENTRY_2_PERIOD'),
       location: t('EDUCATION_ENTRY_2_LOCATION'),
-      logo: "/src/assets/Ankara_Üniversitesi_logo.png",
+      logo: "/assets/Ankara_University_logo.png",
       link: "https://comp.eng.ankara.edu.tr/"
     },
   ]
