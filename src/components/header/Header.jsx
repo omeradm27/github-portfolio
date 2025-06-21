@@ -26,7 +26,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
-          <img src="/logo.png" alt="Ömer Çetinadam" className='logo'/>
+          <img src="/github-portfolio/logo.png" alt="Ömer Çetinadam" className='logo'/>
         </NavLink>
         <div className={open ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className="nav__list">
