@@ -1,7 +1,6 @@
 .about__container {
   max-width: 80%;
   margin: 2rem auto;
-
   background: var(--bg-alt, #fff);
   border-radius: var(--radius, 1rem);
   box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.1));
@@ -37,10 +36,16 @@
 
 .about__description {
   width: 60%;
-  display: block;     /* ensure it respects width */
-  margin: 0 auto;     /* center it */
+  display: block;
+  /* ensure it respects width */
+  margin: 0 auto;
+  /* center it */
 }
+
 @media (max-width: 768px) {
+  .about__container {
+    max-width: 95%;
+  }
   .about__title {
     font-size: 1.75rem;
   }
@@ -51,7 +56,9 @@
 
   .about__description {
     font-size: 0.95rem;
+    width: 90%;
   }
+
   .ant-space {
     flex-direction: column !important;
     align-items: center;

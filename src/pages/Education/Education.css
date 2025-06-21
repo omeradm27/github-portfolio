@@ -97,6 +97,10 @@
   margin-top: 0.25rem;
 }
 @media (max-width: 768px) {
+  .education__container {
+    padding: 1rem;
+    max-width: 95%;
+  }
   .education__item {
     flex-direction: column;
     align-items: center;

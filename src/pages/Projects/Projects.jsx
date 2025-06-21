@@ -155,7 +155,7 @@ export default function Projects() {
                     target="_blank"
                     style={{ paddingTop: '0.2rem',color:proj.live ? 'white':'gray' }}
                   >
-                    Live
+                    {t('PROJECTS_LIVE')}
                   </Button>,
                   <Button
                     key="code"
@@ -166,7 +166,7 @@ export default function Projects() {
                     target="_blank"
                     style={{ paddingTop: '0.2rem' }}
                   >
-                    Code
+                    {t('PROJECTS_CODE')}
                   </Button>,
                   <Button
                     key="details"
@@ -174,7 +174,7 @@ export default function Projects() {
                     icon={<InfoCircleOutlined />}
                     onClick={() => setSelected(proj)}
                   >
-                    Details
+                    {t('PROJECTS_DETAIL')}
                   </Button>
                 ]}
               >

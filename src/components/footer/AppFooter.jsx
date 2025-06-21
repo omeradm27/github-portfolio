@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Space, Typography } from 'antd'
+import { Layout, Typography } from 'antd'
 import {
     GithubOutlined,
     LinkedinOutlined,
@@ -15,7 +15,7 @@ const { Text, Link } = Typography
 const AppFooter = () => {
     return (
         <Footer className="app__footer">
-            <Space size="large" className="footer__social">
+            <div className="footer__social">
                 <Link href="https://github.com/omeradm27" target="_blank">
                     <GithubOutlined />
                 </Link>
@@ -25,10 +25,10 @@ const AppFooter = () => {
                 <Link href="mailto:omercetinadam1993@gmail.com">
                     <MailOutlined />
                 </Link>
-                <Link
-                    href={`https://wa.me/905518687754`}
-                ><WhatsAppOutlined style={{ fontSize: 24 }} /></Link>
-            </Space>
+                <Link href="https://wa.me/905518687754" target="_blank">
+                    <WhatsAppOutlined />
+                </Link>
+            </div>
             <Text type="secondary" className="footer__copyright">
                 {t('FOOTER_COPYRIGHT')}
             </Text>
