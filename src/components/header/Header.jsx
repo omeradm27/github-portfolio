@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaHome, FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope } from 'react-icons/fa';
 import LanguageSelector from './../LanguageSelector';
 import './Header.css';
-import logo from '../../assets/logo.png';
+
 const Header = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
-          <img src={logo} alt="Ömer Çetinadam" className='logo'/>
+          <img src='/assets/logo.png' alt="Ömer Çetinadam" className='logo'/>
         </NavLink>
         <div className={open ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className="nav__list">
