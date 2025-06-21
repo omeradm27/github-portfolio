@@ -18,11 +18,6 @@ const Loading = () => {
       <p className="loading__text">
         Loading...
       </p>
-
-      {/* Optional Ant Design fallback */}
-      <div className="hidden">
-        <Spin size="large" />
-      </div>
     </div>
   )
 }
