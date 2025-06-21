@@ -6,7 +6,10 @@ import { MailOutlined, WhatsAppOutlined, PhoneOutlined, SendOutlined } from '@an
 import './Contact.css'
 import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
-
+const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const { Title, Text } = Typography
 
 const contactData = {
@@ -46,10 +49,10 @@ const handleRecaptchaExpire = () => {
     e.preventDefault()
     console.log("formRef.current", { ...formRef.current });
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      serviceId,
+      templateId,
       formRef.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      publicKey
     ).then(() => {
       message.success(t('CONTACT_SUCCESS'))
     }).catch((err) => {
@@ -117,7 +120,7 @@ const handleRecaptchaExpire = () => {
               </div>
               <div className='recaptcha'>
                 <ReCAPTCHA
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  sitekey={siteKey}
                   ref={recaptchaRef}
                   onChange={handleRecaptchaChange}
                   onExpired={handleRecaptchaExpire}
