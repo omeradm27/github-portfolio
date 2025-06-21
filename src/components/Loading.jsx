@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Spin } from 'antd'
+import './Loading.css' // External CSS file
 
 const Loading = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-white dark:bg-gray-900">
+    <div className="loading__wrapper">
       <motion.div
-        className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full"
+        className="loading__spinner"
         animate={{ rotate: 360 }}
         transition={{
           repeat: Infinity,
@@ -14,7 +15,7 @@ const Loading = () => {
           duration: 1
         }}
       />
-      <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg font-medium">
+      <p className="loading__text">
         Loading...
       </p>
 
