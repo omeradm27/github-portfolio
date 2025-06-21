@@ -5,6 +5,7 @@ import './i18n';
 
 import MainLayout from './layout/MainLayout';
 import SocialMedia from './components/SocialMedia';
+import Loading from './components/Loading';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const About = React.lazy(() => import('./pages/About/About'));
@@ -17,7 +18,7 @@ const Contact = React.lazy(() => import('./pages/Contact/Contact'));
 function App() {
   return (
     <Router basename={"/"}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <AnimatePresence exitBeforeEnter>
           <MainLayout>
             <AnimatedRoutes />
