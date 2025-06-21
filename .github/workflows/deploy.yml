@@ -23,7 +23,12 @@ jobs:
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
           VITE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_RECAPTCHA_SITE_KEY }}
-        run: npm run build
+        run: |
+          echo "VITE_RECAPTCHA_SITE_KEY=$VITE_RECAPTCHA_SITE_KEY" >> .env.production
+          echo "VITE_EMAILJS_SERVICE_ID=$VITE_EMAILJS_SERVICE_ID" >> .env.production
+          echo "VITE_EMAILJS_TEMPLATE_ID=$VITE_EMAILJS_TEMPLATE_ID" >> .env.production
+          echo "VITE_EMAILJS_PUBLIC_KEY=$VITE_EMAILJS_PUBLIC_KEY" >> .env.production
+          npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
