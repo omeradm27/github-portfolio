@@ -12,7 +12,7 @@ const Home = React.lazy(() => import('./pages/Home/Home'));
 
 function App() {
   return (
-    <Router basename="/github-portfolio/">
+    <Router>
       <Suspense fallback={<Loading />}>
         <AnimatePresence exitBeforeEnter>
           <MainLayout>
