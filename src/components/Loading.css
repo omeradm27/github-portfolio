@@ -1,0 +1,30 @@
+.loading__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .loading__wrapper {
+    background-color: #111827;
+    color: #d1d5db;
+  }
+}
+
+.loading__spinner {
+  width: 6rem;
+  height: 6rem;
+  border: 6px solid #2563eb; /* blue-600 */
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+
+.loading__text {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
