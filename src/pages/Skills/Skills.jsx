@@ -36,7 +36,8 @@ import {
   SiSequelize,
   SiHtml5,
   SiCss3,
-  SiJavascript
+  SiJavascript,
+  SiRedux
 } from 'react-icons/si'
 import './Skills.css'
 
@@ -44,6 +45,7 @@ const { Title, Text } = Typography
 
 const frontendCI = [
   { name: 'ReactJS', icon: <FaReact size={32} /> },
+  { name: 'Redux', icon: <SiRedux size={32} /> },
   { name: 'VueJS', icon: <SiVuedotjs size={32} /> },
   { name: 'NextJS', icon: <SiNextdotjs size={32} /> },
   { name: 'Laravel', icon: <SiLaravel size={32} /> },
