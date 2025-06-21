@@ -9,7 +9,7 @@
 }
 
 .home__img {
-  background: url('/src/assets/profile.jpg');
+  background: url('/assets/profile.jpg');
   background-size: cover;
   background-position: center;
   width: 20rem;

@@ -37,7 +37,7 @@ export default function Projects() {
       ],
       technologies: ['.NET Core', 'Node.js', 'Vue.js', 'Redis', 'RabbitMQ'],
       live: 'https://felixo.com',
-      logo: '/src/assets/felixo.png'
+      logo: '/assets/felixo.png'
     },
     {
       title: t('PROJECTS_ZEROWASTEGPT_TITLE'),
@@ -48,7 +48,7 @@ export default function Projects() {
       ],
       technologies: ['Next.js', 'Redis', 'Vercel', 'OpenAI GPT-4'],
       live: 'https://zerowastegpt.org/',
-      logo: '/src/assets/ZeroWasteGPT.png'
+      logo: '/assets/ZeroWasteGPT.png'
     },
     {
       title: t('PROJECTS_EASYCRM_TITLE'),
@@ -59,7 +59,7 @@ export default function Projects() {
       ],
       technologies: ['React', 'TypeScript', 'Prisma', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
       live: 'https://crm-test-frontend.vercel.app/',
-      logo: '/src/assets/Easy_Crm.png'
+      logo: '/assets/Easy_Crm.png'
     },
     {
       title: t('PROJECTS_PERSIY_TITLE'),
@@ -73,7 +73,7 @@ export default function Projects() {
       technologies: ['React', 'Redux', 'Next.js', 'Prisma', 'PostgreSQL', 'GitHub Actions', 'Vercel'],
       github: 'https://github.com/yourusername/persiy',
       live: 'https://persiy-frontend.vercel.app/',
-      logo: '/src/assets/Persiy.png'
+      logo: '/assets/Persiy.png'
     },
     {
       title: t('PROJECTS_VARTUR_TITLE'),
@@ -87,7 +87,7 @@ export default function Projects() {
       ],
       technologies: ['PHP', 'Laravel', 'Vue.js', 'Prisma', 'Docker', 'Redis', 'RabbitMQ', 'MongoDB', 'MySQL'],
       live: 'http://vartur.com/',
-      logo: '/src/assets/Vartur.png'
+      logo: '/assets/Vartur.png'
     },
     {
       title: t('PROJECTS_RASOFT_TITLE'),
@@ -100,7 +100,7 @@ export default function Projects() {
       ],
       technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL'],
       live: 'https://pys.rasoft.com.tr/',
-      logo: '/src/assets/Rasoft_PYS.png'
+      logo: '/assets/Rasoft_PYS.png'
     },
     {
       title: t('PROJECTS_LIBRARY_TITLE'),
@@ -113,7 +113,7 @@ export default function Projects() {
       technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'TypeScript'],
       live: 'https://library-app-web.vercel.app/',
       github: 'https://github.com/omeradm27/library-app-web',
-      logo: '/src/assets/libraryApp.png'
+      logo: '/assets/libraryApp.png'
     }
   ]
 
