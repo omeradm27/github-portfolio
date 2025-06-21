@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
 import { AnimatePresence } from 'framer-motion';
 import './i18n';
 
@@ -11,7 +12,7 @@ const Home = React.lazy(() => import('./pages/Home/Home'));
 
 function App() {
   return (
-    <Router basename={"/"}>
+    <Router basename="/github-portfolio/">
       <Suspense fallback={<Loading />}>
         <AnimatePresence exitBeforeEnter>
           <MainLayout>
