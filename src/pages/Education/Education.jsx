@@ -50,7 +50,7 @@ const Education = () => {
             <Link href={item.link} target="_blank" key={idx}>
               <div className="education__item" key={idx}>
                 <div className="education__left">
-                  <img src={item.logo} alt="logo" className="education__logo" />
+                  <img src={"/github-portfolio/" + item.logo} alt="logo" className="education__logo" />
                   <div className="education__period">{item.period}</div>
                 </div>
                 <div className="education__center">

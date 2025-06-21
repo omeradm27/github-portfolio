@@ -47,7 +47,7 @@ const ProjectCarousel = ({ projects }) => {
                 <Col key={i} xs={22} sm={12} md={8}>
                   <Card
                     hoverable
-                    cover={<img alt={proj.title} src={proj.logo} className="carousel__image" />}
+                    cover={<img alt={proj.title} src={"/github-portfolio/" + proj.logo} className="carousel__image" />}
                     onClick={() => window.open(proj.live || proj.github, '_blank')}
                   >
                     <Meta title={proj.title} description={proj.period} />

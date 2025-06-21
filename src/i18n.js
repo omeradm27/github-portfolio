@@ -9,7 +9,7 @@ i18n
     lng: localStorage.getItem('language') || 'en',
     fallbackLng: 'en',
     backend: {
-      loadPath: '/locales/{{lng}}.json',
+      loadPath: '/github-portfolio/locales/{{lng}}.json',
     },
     interpolation: { escapeValue: false },
   });

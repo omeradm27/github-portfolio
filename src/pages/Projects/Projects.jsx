@@ -140,7 +140,7 @@ export default function Projects() {
                 cover={
                   <img
                     alt={proj.title}
-                    src={proj.logo}
+                    src={"/github-portfolio/" + proj.logo}
                     className="projects__cover"
                   />
                 }

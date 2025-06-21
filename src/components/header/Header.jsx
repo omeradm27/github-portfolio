@@ -79,7 +79,7 @@ export default function Header() {
         {/* logo + mobile toggle */}
         <div className="nav__mobile-wrapper">
           <a href="#about" className="nav__logo" onClick={scrollTo('about')}>
-            <img src="/assets/logo.png" alt="Logo" className="logo" />
+            <img src="/github-portfolio/assets/logo.png" alt="Logo" className="logo" />
           </a>
           <div className="nav__actions">
             {window.innerWidth <= 768 && <LanguageSelector />}
