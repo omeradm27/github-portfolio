@@ -59,7 +59,18 @@ const ProjectCarousel = ({ projects }) => {
         ))}
       </Carousel>
       <div className="carousel__footer">
-        <Button type="link" onClick={() => navigate('/projects')}>{t('VIEW_ALL_PROJECTS')} <RightOutlined /></Button>
+        <Button
+          type="link"
+          onClick={e => {
+            e.preventDefault();
+            const target = document.getElementById('projects');
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
+          {t('VIEW_ALL_PROJECTS')} <RightOutlined />
+        </Button>
       </div>
     </section>
   );

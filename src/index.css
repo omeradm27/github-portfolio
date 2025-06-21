@@ -12,6 +12,7 @@ html, body, #root {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --header-offset: 6rem;
 }
 main {
   flex: 1;
@@ -35,4 +36,17 @@ code {
   align-items: center;
   gap: 1rem;
   width: 100%;
+}
+
+/* Any element you’re anchoring to (#about, #projects, etc.) */
+#about,
+#education,
+#experience,
+#projects,
+#skills,
+#contact {
+  /* modern browsers */
+  scroll-margin-top: var(--header-offset);
+  /* fallback for older webkit */
+  -webkit-scroll-margin-top: var(--header-offset);
 }

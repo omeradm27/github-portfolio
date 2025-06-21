@@ -1,14 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from 'antd';
-import { ArrowRightOutlined } from '@ant-design/icons';
-import { useTranslation } from 'react-i18next';
-import './Home.css';
-import ProjectCarousel from '../../components/projectCarousel/ProjectCarousel';
+// src/pages/Home/Home.jsx
+import React, { useEffect, useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import HomeContent from './HomeContent'
+import ProjectCarousel from '../../components/projectCarousel/ProjectCarousel'
+import About from '../About/About'
+import Education from '../Education/Education'
+import Experience from '../Experience/Experience'
+import Skills from '../Skills/Skills'
+import Contact from '../Contact/Contact'
+import Projects from '../Projects/Projects'
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
 
 const Home = () => {
-  const { t } = useTranslation();
-const projectsData = [
+  const { t } = useTranslation()
+  const projectsData = [
     {
       title: t('PROJECTS_FELIXO_TITLE'),
       company: t('PROJECTS_FELIXO_COMPANY'),
@@ -99,48 +109,34 @@ const projectsData = [
       logo: '/assets/libraryApp.png'
     }
   ]
+  const sections = [
+    { id: 'home', Component: HomeContent },
+    { id: 'featured', Component: () => <ProjectCarousel projects={projectsData} /> },
+    { id: 'about', Component: About },
+    { id: 'education', Component: Education },
+    { id: 'experience', Component: Experience },
+    { id: 'projects', Component: Projects },
+    { id: 'skills', Component: Skills },
+    { id: 'contact', Component: Contact }
+  ]
+
   return (
-    <motion.section
-      className="home section bg-gray-100 py-16"
-      id="home"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="home__container container mx-auto flex flex-col lg:flex-row justify-center items-center gap-12 px-4">
+    <AnimatePresence mode="wait">
+      {sections.map(({ id, Component }) => (
+        <motion.section
+          key={id}
+          id={id}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={sectionVariants}
+          transition={{ duration: 0.6 }}
+        >
+          <Component id={id} />
+        </motion.section>
+      ))}
+    </AnimatePresence>
+  )
+}
 
-        {/* Left side: Text Content */}
-        <div className=" flex flex-row justify-center items-start flex-1 text-center lg:text-left">
-          <h1 className="home__title text-3xl lg:text-4xl font-bold text-primary mb-4">{t('HOME_TITLE')}</h1>
-          <p className="home__subtitle text-lg text-gray-600 mb-6">{t('HOME_SUBTITLE')}</p>
-          <p className="home__description text-gray-700 mb-6">{t('HOME_CONTENT')}</p>
-
-          {/* Ant Design Button with Tailwind Styling */}
-          <Button
-            type="primary"
-            shape="round"
-            icon={<ArrowRightOutlined />}
-            size="large"
-            href="/contact"
-            className="py-3 px-6 text-black text-lg font-semibold hover:bg-blue-700 transition-all duration-300 ease-in-out"
-          >
-            {t('HOME_BUTTON')}
-          </Button>
-        </div>
-
-        {/* Right side: Profile Image */}
-        <div className="home__right flex justify-center items-center flex-1">
-          <div className="home__img w-40 h-40 rounded-full shadow-xl bg-cover bg-center"
-            style={{ backgroundImage: 'url("/assets/profile.jpg")' }}>
-          </div>
-        </div>
-
-      </div>
-      <ProjectCarousel projects={projectsData} />
-    </motion.section>
-
-  );
-};
-
-export default Home;
+export default Home

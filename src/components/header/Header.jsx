@@ -1,78 +1,122 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope } from 'react-icons/fa';
-import LanguageSelector from './../LanguageSelector';
+import {
+  FaUser,
+  FaGraduationCap,
+  FaBriefcase,
+  FaFolderOpen,
+  FaCog,
+  FaEnvelope
+} from 'react-icons/fa';
+import LanguageSelector from '../LanguageSelector';
 import './Header.css';
 
-const Header = () => {
+const SECTIONS = [
+  { id: 'about',     labelKey: 'HEADER_ABOUT',     icon: <FaUser />         },
+  { id: 'education', labelKey: 'HEADER_EDUCATION', icon: <FaGraduationCap /> },
+  { id: 'experience',labelKey: 'HEADER_EXPERIENCE',icon: <FaBriefcase />    },
+  { id: 'projects',  labelKey: 'HEADER_PROJECTS',   icon: <FaFolderOpen />   },
+  { id: 'skills',    labelKey: 'HEADER_SKILLS',     icon: <FaCog />          },
+  { id: 'contact',   labelKey: 'HEADER_CONTACT',    icon: <FaEnvelope />      },
+];
+
+export default function Header() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('about');
   const menuRef = useRef(null);
-  const isMobile = window.innerWidth <= 768;
 
+  // 1) Scroll listener to toggle 'scroll-header' class
   useEffect(() => {
-    const handleScroll = () => {
-      const hdr = document.querySelector('.header');
-      if (window.scrollY > 100) {
-        hdr.classList.add('scroll-header');
-      } else {
-        hdr.classList.remove('scroll-header');
-      }
+    const onScroll = () => {
+      document
+        .querySelector('.header')
+        .classList.toggle('scroll-header', window.scrollY > 100);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // 2) Close mobile menu if you click outside it
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
+    const onClickOutside = e => {
+      if (open && menuRef.current && !menuRef.current.contains(e.target)) {
         setOpen(false);
       }
     };
-    if (open) document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', onClickOutside);
+    return () => document.removeEventListener('mousedown', onClickOutside);
   }, [open]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px' }
+    );
+    SECTIONS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollTo = id => e => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
+  };
 
   return (
     <header className="header">
       <nav className="nav container">
+        {/* logo + mobile toggle */}
         <div className="nav__mobile-wrapper">
-          <NavLink to="/" className="nav__logo">
-            <img src='/assets/logo.png' alt="Ömer Çetinadam" className='logo' />
-          </NavLink>
+          <a href="#about" className="nav__logo" onClick={scrollTo('about')}>
+            <img src="/assets/logo.png" alt="Logo" className="logo" />
+          </a>
           <div className="nav__actions">
-            {isMobile && <LanguageSelector />}
-            <button className="nav__toggle" onClick={() => setOpen(!open)}>☰</button>
+            {window.innerWidth <= 768 && <LanguageSelector />}
+            <button
+              className="nav__toggle"
+              onClick={() => setOpen(o => !o)}
+              aria-label="Toggle menu"
+            >
+              ☰
+            </button>
           </div>
         </div>
-        <div ref={menuRef} className={open ? 'nav__menu show-menu' : 'nav__menu'}>
+
+        {/* menu */}
+        <div
+          ref={menuRef}
+          className={`nav__menu ${open ? 'show-menu' : ''}`}
+        >
           <ul className="nav__list">
-            {[
-              { key: 'about', label: t('HEADER_ABOUT'), icon: <FaUser /> },
-              { key: 'education', label: t('HEADER_EDUCATION'), icon: <FaGraduationCap /> },
-              { key: 'experience', label: t('HEADER_EXPERIENCE'), icon: <FaBriefcase /> },
-              { key: 'projects', label: t('HEADER_PROJECTS'), icon: <FaFolderOpen /> },
-              { key: 'skills', label: t('HEADER_SKILLS'), icon: <FaCog /> },
-              { key: 'contact', label: t('HEADER_CONTACT'), icon: <FaEnvelope /> },
-            ].map(({ key, label, icon }) => (
-              <li key={key} className="nav__item">
-                <NavLink
-                  to={key === 'home' ? '/' : `/${key}`}
-                  className={({ isActive }) => isActive ? 'nav__link active-link' : 'nav__link '}
-                  onClick={() => setOpen(false)}
+            {SECTIONS.map(({ id, labelKey, icon }) => (
+              <li key={id} className="nav__item">
+                <a
+                  href={`#${id}`}
+                  className={`nav__link${active === id ? ' active-link' : ''}`}
+                  onClick={scrollTo(id)}
                 >
                   <span className="nav__icon">{icon}</span>
-                  <span className="nav__icon">{t(label)}</span>
-                </NavLink>
+                  {t(labelKey)}
+                </a>
               </li>
             ))}
           </ul>
         </div>
-        {!isMobile && <LanguageSelector />}
+
+        {/* desktop language selector */}
+        {window.innerWidth > 768 && <LanguageSelector />}
       </nav>
     </header>
   );
-};
-
-export default Header;
+}
