@@ -112,6 +112,21 @@
   "PROJECTS_RASOFT_DETAILS_2": "Dynamiczne menu dostępności → 25% mniej błędów w planowaniu",
   "PROJECTS_RASOFT_DETAILS_3": "Zoptymalizowane interfejsy API i SQL → 40% szybsze ładowanie stron",
   "PROJECTS_RASOFT_DETAILS_4": "Współpraca nad responsywnym interfejsem użytkownika dla stron internetowych/urządzeń mobilnych",
+  "PROJECTS_NDK_TITLE": "Platforma internetowa NDK Consulting",
+  "PROJECTS_NDK_PERIOD": "10/2022 – 01/2023",
+  "PROJECTS_NDK_DETAILS_1": "Byłem odpowiedzialny za rozwój techniczny w pełni zintegrowanej platformy internetowej zbudowanej przy użyciu architektury monolitycznej",
+  "PROJECTS_NDK_DETAILS_2": "Wykorzystano frontend oparty na React, aby umożliwić dynamiczne zarządzanie treścią i zapewnić przyjazne dla użytkownika doświadczenie",
+  "PROJECTS_NDK_DETAILS_3": "Opracowano panel administracyjny oparty na rolach; stworzono niestandardowe ekrany dla terapeutów, administratorów i redaktorów treści.",
+  "PROJECTS_NDK_DETAILS_4": "Wdrożono system zarządzania i śledzenia wizyt, aby umożliwić terapeutom łatwe monitorowanie zgłoszeń online.",
+  "PROJECTS_NDK_DETAILS_5": "W warstwie zaplecza stworzono architekturę RESTful API przy użyciu Node.js i Express.",
+  "PROJECTS_NDK_DETAILS_6": "Do przechowywania danych użyto bazy danych MySQL, a niezbędne tabele zostały zoptymalizowane.",
+  "PROJECTS_NDK_DETAILS_7": "Środowisko produkcyjne skonfigurowano przy użyciu Nginx, a pliki statyczne i ustawienia routingu zoptymalizowano.",
+  "PROJECTS_NDK_DETAILS_8": "Wdrożono responsywny projekt kompatybilny z urządzeniami mobilnymi i komputerami stacjonarnymi, zwiększając interakcję użytkowników o 40%.",
+  "PROJECTS_WATERFOOTPRINT_TITLE": "Kalkulator śladu wodnego",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_1": "Opracowano jednostronicową aplikację opartą na React do obliczania osobistego śladu wodnego",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_2": "Zaprojektowano responsywny interfejs użytkownika i wdrożono aplikację na platformie Vercel w celu uzyskania optymalnej szybkości i zasięgu.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_3": "Aplikacja zawiera kwestionariusz dotyczący stylu życia i dynamiczne sugestie dotyczące zrównoważonego rozwoju.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_4": "Zbudowana przy użyciu Tailwind CSS i modułowej architektury React",
   "PROJECTS_LIBRARY_TITLE": "Zarządzanie biblioteką",
   "PROJECTS_LIBRARY_DETAILS_1": "Przyjazny dla użytkownika interfejs do zarządzania książkami i użytkownikami",
   "PROJECTS_LIBRARY_DETAILS_2": "Integracja z interfejsem API zaplecza",
@@ -139,5 +154,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Wygasła ważność Recaptcha",
   "PROJECTS_CAROUSEL_TITLE": "Polecane projekty",
   "VIEW_ALL_PROJECTS": "Wyświetl wszystkie projekty",
-  "FOOTER_COPYRIGHT": "Wszelkie prawa zastrzeżone  © 2025 Omer Cetinadam"
+  "FOOTER_COPYRIGHT": "Wszelkie prawa zastrzeżone  © 2023 Omer Cetinadam"
 }

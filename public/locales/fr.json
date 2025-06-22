@@ -117,6 +117,21 @@
   "PROJECTS_LIBRARY_DETAILS_2": " Intégration avec l'API backend ",
   "PROJECTS_LIBRARY_DETAILS_3": " Fonctionnalité d'emprunt et de retour de livres ",
   "PROJECTS_LIBRARY_DETAILS_4": " Configuration de l'API en fonction de l'environnement (local/distant) ",
+  " PROJECTS_NDK_TITLE " : " Plateforme Web NDK Consulting ",
+  " PROJECTS_NDK_PERIOD " : " 10/2022 – 01/2023 ",
+  " PROJECTS_NDK_DETAILS_1 " : " J'étais responsable du développement technique d'une plateforme web entièrement intégrée, construite à l'aide d'une architecture monolithique. ",
+  " PROJECTS_NDK_DETAILS_2 " : " Une interface utilisateur basée sur React a été utilisée pour permettre une gestion dynamique du contenu et offrir une expérience conviviale. ",
+  " PROJECTS_NDK_DETAILS_3 " : " Un panneau d'administration basé sur les rôles a été développé ; des écrans personnalisés ont été créés pour les rôles de thérapeute, d'administrateur et d'éditeur de contenu. ",
+  " PROJECTS_NDK_DETAILS_4 " : " Un système de gestion et de suivi des rendez-vous a été mis en place pour permettre aux thérapeutes de suivre facilement les demandes en ligne. ",
+  " PROJECTS_NDK_DETAILS_5 " : " Une architecture API RESTful a été mise en place à l'aide de Node.js et Express dans la couche backend. ",
+  " PROJECTS_NDK_DETAILS_6 " : " Une base de données MySQL a été utilisée pour le stockage des données, et les tables nécessaires ont été optimisées. ",
+  " PROJECTS_NDK_DETAILS_7 " : " L'environnement de production a été configuré avec Nginx, et les fichiers statiques et les paramètres de routage ont été optimisés. ",
+  " PROJECTS_NDK_DETAILS_8 " : " Une conception réactive compatible avec les appareils mobiles et les ordinateurs de bureau a été mise en œuvre, augmentant l'interaction des utilisateurs de 40 %. ",
+  " PROJECTS_WATERFOOTPRINT_TITLE " : " Calculateur d'empreinte hydrique ",
+  " PROJECTS_WATERFOOTPRINT_DETAILS_1 " : " Développement d'une application monopage basée sur React pour calculer l'empreinte hydrique personnelle. ",
+  " PROJECTS_WATERFOOTPRINT_DETAILS_2 " : " Conception d'une interface utilisateur réactive et déploiement de l'application sur Vercel pour une vitesse et une portée optimales. ",
+  " PROJECTS_WATERFOOTPRINT_DETAILS_3 " : " Fournit un questionnaire basé sur le mode de vie et des suggestions dynamiques en matière de durabilité. ",
+  " PROJECTS_WATERFOOTPRINT_DETAILS_4 " : " Développée avec Tailwind CSS et une architecture React modulaire. ",
   "PROJECTS_LIVE": " En direct ",
   "PROJECTS_CODE": " Code ",
   "PROJECTS_DETAIL": " Détails ",
@@ -139,5 +154,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": " Recaptcha expiré ",
   "PROJECTS_CAROUSEL_TITLE": " Projets en vedette ",
   "VIEW_ALL_PROJECTS": " Voir tous les projets ",
-  "FOOTER_COPYRIGHT": " Tous droits réservés © 2025 Omer Cetinadam "
+  "FOOTER_COPYRIGHT": " Tous droits réservés © 2023 Omer Cetinadam "
 }
