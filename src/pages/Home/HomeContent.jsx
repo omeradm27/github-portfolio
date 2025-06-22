@@ -30,6 +30,7 @@ const HomeContent = () => {
             shape="round"
             icon={<ArrowRightOutlined />}
             size="large"
+            className="py-3 px-6 text-black text-lg font-semibold hover:bg-blue-700 transition-all duration-300 ease-in-out"
             onClick={e => {
               e.preventDefault();
               const target = document.getElementById('contract');

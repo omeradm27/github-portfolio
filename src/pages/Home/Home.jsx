@@ -10,6 +10,7 @@ import Experience from '../Experience/Experience'
 import Skills from '../Skills/Skills'
 import Contact from '../Contact/Contact'
 import Projects from '../Projects/Projects'
+import Scrollup from '../../components/Scrollup'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -135,6 +136,7 @@ const Home = () => {
           <Component id={id} />
         </motion.section>
       ))}
+      <Scrollup />
     </AnimatePresence>
   )
 }
