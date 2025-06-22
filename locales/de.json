@@ -112,6 +112,21 @@
   "PROJECTS_RASOFT_DETAILS_2": "Dynamisches Verfügbarkeitsmenü → 25 % weniger Planungsfehler.",
   "PROJECTS_RASOFT_DETAILS_3": "Optimierte APIs und SQL → 40 % schnellere Seitenladezeiten.",
   "PROJECTS_RASOFT_DETAILS_4": "Zusammenarbeit an responsiver UX für Web/Mobilgeräte.",
+  "PROJECTS_NDK_TITLE": "NDK Consulting Webplattform",
+  "PROJECTS_NDK_PERIOD": "10/2022 – 01/2023",
+  "PROJECTS_NDK_DETAILS_1": "Ich war für die technische Entwicklung einer vollständig integrierten Webplattform verantwortlich, die auf einer monolithischen Architektur basiert.",
+  "PROJECTS_NDK_DETAILS_2": "Ein React-basiertes Frontend wurde verwendet, um eine dynamische Inhaltsverwaltung und eine benutzerfreundliche Erfahrung zu ermöglichen.",
+  "PROJECTS_NDK_DETAILS_3": "Es wurde ein rollenbasiertes Admin-Panel entwickelt; für die Rollen Therapeut, Administrator und Content-Editor wurden benutzerdefinierte Bildschirme erstellt.",
+  "PROJECTS_NDK_DETAILS_4": "Es wurde ein Terminverwaltungs- und -verfolgungssystem implementiert, damit Therapeuten Online-Anmeldungen einfach überwachen können.",
+  "PROJECTS_NDK_DETAILS_5": "Eine RESTful-API-Architektur wurde unter Verwendung von Node.js und Express in der Backend-Ebene eingerichtet.",
+  "PROJECTS_NDK_DETAILS_6": "Eine MySQL-Datenbank wurde für die Datenpersistenz verwendet, und die erforderlichen Tabellen wurden optimiert.",
+  "PROJECTS_NDK_DETAILS_7": "Die Produktionsumgebung wurde mit Nginx konfiguriert und statische Dateien sowie Routing-Einstellungen wurden optimiert.",
+  "PROJECTS_NDK_DETAILS_8": "Es wurde ein für Mobilgeräte und Desktop-Computer kompatibles responsives Design implementiert, wodurch die Benutzerinteraktion um 40 % gesteigert werden konnte.",
+  "PROJECTS_WATERFOOTPRINT_TITLE": "Wasserfußabdruck-Rechner",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_1": "Entwicklung einer React-basierten Single-Page-App zur Berechnung des persönlichen Wasserfußabdrucks",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_2": "Entwurf einer responsiven Benutzeroberfläche und Bereitstellung der App auf Vercel für optimale Geschwindigkeit und Reichweite.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_3": "Bietet einen auf dem Lebensstil basierenden Fragebogen und dynamische Vorschläge zur Nachhaltigkeit.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_4": "Entwickelt mit Tailwind CSS und modularer React-Architektur.",
   "PROJECTS_LIBRARY_TITLE": "Bibliotheksverwaltung",
   "PROJECTS_LIBRARY_DETAILS_1": "Benutzerfreundliche Benutzeroberfläche für die Verwaltung von Büchern und Benutzern",
   "PROJECTS_LIBRARY_DETAILS_2": "Integration mit Backend-API",
@@ -139,5 +154,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha abgelaufen",
   "PROJECTS_CAROUSEL_TITLE": "Ausgewählte Projekte",
   "VIEW_ALL_PROJECTS": "Alle Projekte anzeigen",
-  "FOOTER_COPYRIGHT": "Alle Rechte vorbehalten. © 2025 Omer Cetinadam."
+  "FOOTER_COPYRIGHT": "Alle Rechte vorbehalten. © 2023 Omer Cetinadam."
 }

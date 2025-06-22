@@ -113,6 +113,21 @@
   "PROJECTS_RASOFT_DETAILS_2": "Menú de disponibilidad dinámica → 25 % menos de errores de programación.",
   "PROJECTS_RASOFT_DETAILS_3": "API y SQL optimizados → Carga de páginas un 40 % más rápida.",
   "PROJECTS_RASOFT_DETAILS_4": "Colaboración en la experiencia de usuario responsiva para web/móvil.",
+  "PROJECTS_NDK_TITLE":"Plataforma web de NDK Consulting",
+  "PROJECTS_NDK_PERIOD":"10/2022 – 01/2023",
+  "PROJECTS_NDK_DETAILS_1":"Fui responsable del desarrollo técnico de una plataforma web totalmente integrada construida utilizando una arquitectura monolítica",
+  "PROJECTS_NDK_DETAILS_2":"Se utilizó una interfaz basada en React para permitir la gestión dinámica de contenidos y una experiencia fácil de usar",
+  "PROJECTS_NDK_DETAILS_3":"Se desarrolló un panel de administración basado en roles; se crearon pantallas personalizadas para los roles de terapeuta, administrador y editor de contenido.",
+  "PROJECTS_NDK_DETAILS_4":"Se implementó un sistema de gestión y seguimiento de citas para permitir a los terapeutas supervisar fácilmente las solicitudes en línea.",
+  "PROJECTS_NDK_DETAILS_5":"Se estableció una arquitectura API RESTful utilizando Node.js y Express en la capa de backend.",
+  "PROJECTS_NDK_DETAILS_6":"Se utilizó una base de datos MySQL para la persistencia de datos y se optimizaron las tablas necesarias.",
+  "PROJECTS_NDK_DETAILS_7":"El entorno de producción se configuró con Nginx y se optimizaron los archivos estáticos y la configuración de enrutamiento",
+  "PROJECTS_NDK_DETAILS_8":"Se implementó un diseño adaptable compatible con dispositivos móviles y de escritorio, lo que aumentó la interacción de los usuarios en un 40 %",
+  "PROJECTS_WATERFOOTPRINT_TITLE":"Calculadora de la huella hídrica",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_1":"Se desarrolló una aplicación de una sola página basada en React para calcular la huella hídrica personal.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_2":"Se diseñó una interfaz de usuario adaptativa y se implementó la aplicación en Vercel para optimizar la velocidad y el alcance.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_3":"Ofrece un cuestionario basado en el estilo de vida y sugerencias dinámicas de sostenibilidad.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_4":"Creada con Tailwind CSS y arquitectura React modular.",
   "PROJECTS_LIBRARY_TITLE": "Gestión de bibliotecas",
   "PROJECTS_LIBRARY_DETAILS_1": "Interfaz de usuario intuitiva para gestionar libros y usuarios",
   "PROJECTS_LIBRARY_DETAILS_2": "Integración con la API backend",
@@ -140,5 +155,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha caducado",
   "PROJECTS_CAROUSEL_TITLE": "Proyectos destacados",
   "VIEW_ALL_PROJECTS": "Ver todos los proyectos",
-  "FOOTER_COPYRIGHT": "Todos los derechos reservados. © 2025 Omer Cetinadam. "
+  "FOOTER_COPYRIGHT": "Todos los derechos reservados. © 2023 Omer Cetinadam. "
 }

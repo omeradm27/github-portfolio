@@ -112,6 +112,21 @@
   "PROJECTS_RASOFT_DETAILS_2": "Dynamic availability menu → 25% fewer scheduling errors.",
   "PROJECTS_RASOFT_DETAILS_3": "Optimized APIs & SQL → 40% faster page loads.",
   "PROJECTS_RASOFT_DETAILS_4": "Collaborated on responsive UX for web/mobile.",
+  "PROJECTS_NDK_TITLE": "NDK Consulting Web Platform",
+  "PROJECTS_NDK_PERIOD": "10/2022 – 01/2023",
+  "PROJECTS_NDK_DETAILS_1": "I was responsible for the technical development of a fully integrated web platform built using monolithic architecture.",
+  "PROJECTS_NDK_DETAILS_2": "A React-based frontend was used to enable dynamic content management and a user-friendly experience.",
+  "PROJECTS_NDK_DETAILS_3": "A role-based admin panel was developed; custom screens were created for therapist, administrator, and content editor roles.",
+  "PROJECTS_NDK_DETAILS_4": "An appointment management and tracking system was implemented to enable therapists to easily monitor online applications.",
+  "PROJECTS_NDK_DETAILS_5": "A RESTful API architecture was established using Node.js and Express in the backend layer.",
+  "PROJECTS_NDK_DETAILS_6": "A MySQL database was used for data persistence, and the necessary tables were optimised.",
+  "PROJECTS_NDK_DETAILS_7": "The production environment was configured with Nginx, and static files and routing settings were optimised.",
+  "PROJECTS_NDK_DETAILS_8": "A mobile and desktop-compatible responsive design was implemented, increasing user interaction by 40%.",
+  "PROJECTS_WATERFOOTPRINT_TITLE": "Water Footprint Calculator",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_1": "Developed a React-based single-page app for calculating personal water footprint.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_2": "Designed a responsive UI and deployed the app on Vercel for optimal speed and reach.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_3": "Provides lifestyle-based questionnaire and dynamic sustainability suggestions.",
+  "PROJECTS_WATERFOOTPRINT_DETAILS_4": "Built with Tailwind CSS and modular React architecture.",
   "PROJECTS_LIBRARY_TITLE": "Library Management",
   "PROJECTS_LIBRARY_DETAILS_1": "User-friendly UI for managing books and users",
   "PROJECTS_LIBRARY_DETAILS_2": "Integration with backend API",
@@ -139,5 +154,5 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha expired",
   "PROJECTS_CAROUSEL_TITLE": "Featured Projects",
   "VIEW_ALL_PROJECTS": "View All Projects",
-  "FOOTER_COPYRIGHT": "All rights reserved. © 2025 Omer Cetinadam."
+  "FOOTER_COPYRIGHT": "All rights reserved. © 2023 Omer Cetinadam."
 }
