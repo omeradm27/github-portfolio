@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# 🌐 Ömer Çetinadam | Full-Stack Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio built with modern web technologies. This project showcases my professional background, tech stack, featured projects, and contact information — all in a smooth, SPA (Single Page Application) experience.
 
-## Available Scripts
+![Screenshot](./public/assets/preview.png) <!-- Replace with your actual screenshot -->
 
-In the project directory, you can run:
+## 🚀 Live Demo
+🔗 [Visit Portfolio](https://omeradm27.github.io/github-portfolio)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ⚡ **Fast & Responsive SPA** using React & Vite
+- 🌐 Multi-language support with `react-i18next`
+- 🧩 Animated transitions powered by `framer-motion`
+- 💼 Dynamic project carousel built with Ant Design
+- 🛠️ CI/CD deployment via GitHub Pages & Actions
+- ☁️ Deployed on [GitHub Pages](https://pages.github.com)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 Tech Stack
 
-### `npm run build`
+**Frontend**
+- React, React Router, Redux
+- Tailwind CSS, Ant Design
+- i18n (multi-language)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Backend (project references)**
+- Node.js, Express, Fastify, .NET Core, Laravel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Databases**
+- PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**CI/CD**
+- GitHub Actions, Vercel, Azure Pipelines
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+├── public/
+│   └── assets/             # Logos, images
+├── src/
+│   ├── components/         # Reusable UI components (e.g. Header, Footer)
+│   ├── pages/              # Main sections: Home, About, Projects...
+│   ├── layout/             # Layout wrapper
+│   ├── i18n/               # Internationalization config
+│   ├── App.jsx             # Router & layout
+│   └── main.jsx            # App entry
+├── locales/                # JSON files for translations
+├── vite.config.js          # Vite config with base path
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Setup & Development
 
-## Learn More
+```bash
+# 1. Clone the repo
+git clone https://github.com/omeradm27/github-portfolio.git
+cd github-portfolio
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 2. Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 3. Run locally
+npm run dev
+```
 
-### Code Splitting
+> Ensure `vite.config.js` has the correct `base: '/github-portfolio/'` for GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 Deployment (GitHub Pages)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project is deployed using GitHub Actions and `peaceiris/actions-gh-pages`.
 
-### Making a Progressive Web App
+**To deploy manually:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+npx gh-pages -d dist
+```
 
-### Advanced Configuration
+**To deploy automatically:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Update your `.github/workflows/deploy.yml` to build and push `dist/` to the `gh-pages` branch.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📬 Contact
 
-### `npm run build` fails to minify
+Have a question or want to collaborate?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📧 [omeradm27@gmail.com](mailto:omeradm27@gmail.com)  
+🌐 [LinkedIn](https://linkedin.com/in/omer-cetinadam)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — feel free to use and adapt it.
