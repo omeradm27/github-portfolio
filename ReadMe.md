@@ -2,7 +2,6 @@
 
 Welcome to my personal portfolio built with modern web technologies. This project showcases my professional background, tech stack, featured projects, and contact information — all in a smooth, SPA (Single Page Application) experience.
 
-![Screenshot](./public/assets/preview.png) <!-- Replace with your actual screenshot -->
 
 ## 🚀 Live Demo
 🔗 [Visit Portfolio](https://omeradm27.github.io/github-portfolio)
