@@ -1,4 +1,4 @@
-.projects__section {
+.projects__container {
   max-width: 80%;
   padding: 2rem;
   margin: 2rem auto;
@@ -14,8 +14,13 @@
 }
 
 .projects__grid {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+}
+.projects__button {
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .projects__card-preview {

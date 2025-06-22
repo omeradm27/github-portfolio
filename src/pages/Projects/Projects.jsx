@@ -34,65 +34,68 @@ export default function Projects() {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.6 }}
       >
-        <Title level={2} className="projects__header">
-          {t('PROJECTS_TITLE')}
-        </Title>
+        <Card className="projects__container">
+          <Title level={2} className="projects__header">
+            {t('PROJECTS_TITLE')}
+          </Title>
 
-        <Row gutter={[24, 24]} justify="center" className="projects__grid">
-          {projectsData.map((proj, i) => (
-            <Col key={i} xs={24} sm={12} lg={8}>
-              <Card
-                hoverable
-                className="projects__card-preview"
-                cover={
-                  <img
-                    alt={proj.title}
-                    src={"/github-portfolio/" + proj.logo}
-                    className="projects__cover"
+          <Row gutter={[24, 24]} justify="start" className="projects__grid">
+            {projectsData.map((proj, i) => (
+              <Col key={i} xs={24} sm={12} lg={8}>
+                <Card
+                  hoverable
+                  className="projects__card-preview"
+                  cover={
+                    <img
+                      alt={proj.title}
+                      src={"/github-portfolio/" + proj.logo}
+                      className="projects__cover"
+                    />
+                  }
+                  actions={[
+                    <Button
+                      key="live"
+                      type={proj.live ? 'primary' : 'secondary'}
+                      disabled={!proj.live}
+                      icon={<LinkOutlined />}
+                      href={proj.live}
+                      className='projects__button'
+                      target="_blank"
+                      style={{ paddingTop: '0.2rem', color: proj.live ? 'white' : 'gray' }}
+                    >
+                      {t('PROJECTS_LIVE')}
+                    </Button>,
+                    <Button
+                      key="code"
+                      type={proj.github ? 'primary' : 'secondary'}
+                      disabled={!proj.github}
+                      icon={<GithubOutlined />}
+                      href={proj.github}
+                      className='projects__button'
+                      target="_blank"
+                      style={{ paddingTop: '0.2rem' }}
+                    >
+                      {t('PROJECTS_CODE')}
+                    </Button>,
+                    <Button
+                      key="details"
+                      type="text"
+                      icon={<InfoCircleOutlined />}
+                      onClick={() => setSelected(proj)}
+                    >
+                      {t('PROJECTS_DETAIL')}
+                    </Button>
+                  ]}
+                >
+                  <Meta
+                    title={<Text strong>{proj.title}</Text>}
+                    description={<Text type="secondary">{proj.period}</Text>}
                   />
-                }
-                actions={[
-                  <Button
-                    key="live"
-                    type={proj.live ? 'primary' : 'default'}
-                    disabled={!proj.live}
-                    icon={<LinkOutlined />}
-                    href={proj.live}
-
-                    target="_blank"
-                    style={{ paddingTop: '0.2rem',color:proj.live ? 'white':'gray' }}
-                  >
-                    {t('PROJECTS_LIVE')}
-                  </Button>,
-                  <Button
-                    key="code"
-                    type={proj.github ? 'primary' : 'default'}
-                    disabled={!proj.github}
-                    icon={<GithubOutlined />}
-                    href={proj.github}
-                    target="_blank"
-                    style={{ paddingTop: '0.2rem' }}
-                  >
-                    {t('PROJECTS_CODE')}
-                  </Button>,
-                  <Button
-                    key="details"
-                    type="text"
-                    icon={<InfoCircleOutlined />}
-                    onClick={() => setSelected(proj)}
-                  >
-                    {t('PROJECTS_DETAIL')}
-                  </Button>
-                ]}
-              >
-                <Meta
-                  title={<Text strong>{proj.title}</Text>}
-                  description={<Text type="secondary">{proj.period}</Text>}
-                />
-              </Card>
-            </Col>
-          ))}
-        </Row>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Card>
       </motion.section>
 
       <Modal
