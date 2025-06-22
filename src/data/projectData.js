@@ -106,5 +106,18 @@ export const projectsData = [
         live: 'https://library-app-web.vercel.app/',
         github: 'https://github.com/omeradm27/library-app-web',
         logo: '/assets/libraryApp.png'
+    },
+    {
+        title: t('PROJECTS_WATERFOOTPRINT_TITLE'),
+        details: [
+            t('PROJECTS_WATERFOOTPRINT_DETAILS_1'),
+            t('PROJECTS_WATERFOOTPRINT_DETAILS_2'),
+            t('PROJECTS_WATERFOOTPRINT_DETAILS_3'),
+            t('PROJECTS_WATERFOOTPRINT_DETAILS_4')
+        ],
+        technologies: ['React', 'Tailwind CSS', 'Vercel'],
+        live: 'https://ayakizi.suverimliligi.gov.tr/',
+        logo: '/assets/water-footprint.png'
     }
+
 ]
