@@ -19,7 +19,7 @@ const AppFooter = () => {
                 <Link href="https://github.com/omeradm27" target="_blank">
                     <GithubOutlined />
                 </Link>
-                <Link href="https://www.linkedin.com/in/omer-cetinadam/" target="_blank">
+                <Link href="https://www.linkedin.com/in/omercetinadam/" target="_blank">
                     <LinkedinOutlined />
                 </Link>
                 <Link href="mailto:omercetinadam1993@gmail.com">
