@@ -1,6 +1,5 @@
 import { Carousel, Typography, Card, Button, Row, Col } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
 import './ProjectCarousel.css';
 import { useTranslation } from 'react-i18next';
 
@@ -8,7 +7,6 @@ const { Title } = Typography;
 const { Meta } = Card;
 
 const ProjectCarousel = ({ projects }) => {
-  const navigate = useNavigate();
   const featured = projects.slice(0, 5);
   const { t } = useTranslation();
 
