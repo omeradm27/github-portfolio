@@ -79,7 +79,6 @@ export const projectsData = [
     },
     {
         title: t('PROJECTS_NDK_TITLE'),
-        period: t('PROJECTS_NDK_PERIOD'),
         details: [
             t('PROJECTS_NDK_DETAILS_1'),
             t('PROJECTS_NDK_DETAILS_2'),
