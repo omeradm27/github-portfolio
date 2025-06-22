@@ -13,6 +13,7 @@
   "ABOUT_SUBTITLE": " Ingénieur informatique | Ingénieur Full Stack ",
   "ABOUT_PROFILE": " Après avoir obtenu mon diplôme en génie informatique, j'ai participé à divers projets et j'ai choisi de me spécialiser dans le développement Full Stack. J'ai fourni des solutions dans un large éventail de domaines, allant de .NET Core et Node.js à React, Vue et aux architectures microservices. En tirant parti des pipelines CI/CD basés sur Azure et des conteneurs Docker, j'ai construit des systèmes transparents et évolutifs. Mon objectif est toujours de transformer des problèmes complexes en résultats simples, fiables et mesurables. ",
   "ABOUT_DOWNLOAD": " Télécharger le CV ",
+  "ABOUT_SHOWCV": "Afficher le CV", 
   "ABOUT_CARD_TITLE_1": " Expérience ",
   "ABOUT_CARD_SUBTITLE_1": " 4 ans d'expérience ",
   "ABOUT_CARD_TITLE_2": " Réalisations ",

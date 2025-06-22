@@ -13,6 +13,7 @@
   "ABOUT_SUBTITLE": "Computertechniker | Full-Stack-Entwickler",
   "ABOUT_PROFILE": "Nach meinem Abschluss in Computertechnik habe ich an verschiedenen Projekten mitgearbeitet und mich für eine vertikale Spezialisierung im Bereich Full-Stack-Entwicklung entschieden. Ich habe Lösungen für ein breites Spektrum geliefert – von .NET Core und Node.js bis hin zu React, Vue und Microservice-Architekturen. Durch die Nutzung von Azure-basierten CI/CD-Pipelines und Docker-Containern habe ich nahtlose, skalierbare Systeme aufgebaut. Mein Ziel ist es immer, komplexe Probleme in einfache, zuverlässige und messbare Ergebnisse umzuwandeln.",
   "ABOUT_DOWNLOAD": "Lebenslauf herunterladen",
+  "ABOUT_SHOWCV": "Lebenslauf anzeigen",
   "ABOUT_CARD_TITLE_1": "Erfahrung",
   "ABOUT_CARD_SUBTITLE_1": "4 Jahre Berufserfahrung",
   "ABOUT_CARD_TITLE_2": "Abgeschlossen",
