@@ -1,10 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Typography, Card, Space } from 'antd'
+import { Typography, Card, Space, Button } from 'antd'
 import './About.css'
 import { FaAward, FaBrain, FaBriefcase } from 'react-icons/fa'
 import DownloadButton from '../../components/DownloadButton'
+import ShowCVButton from '../../components/ShowCVButton'
 
 const { Title, Text } = Typography
 
@@ -28,9 +29,9 @@ const About = () => {
           <Title level={5} className="text-gray-500 mb-4">
             {t('ABOUT_SUBTITLE')}
           </Title>
-          <Space size="large" style={{margin: '1rem auto'}}>
+          <Space size="large" style={{ margin: '1rem auto' }}>
             <Card className="aboutCard">
-              <FaAward size={20}/>
+              <FaAward size={20} />
               <Title level={4} className="text-primary">
                 {t('ABOUT_CARD_TITLE_1')}
               </Title>
@@ -39,7 +40,7 @@ const About = () => {
               </Title>
             </Card>
             <Card className="aboutCard">
-              <FaBriefcase size={20}/>
+              <FaBriefcase size={20} />
               <Title level={4} className="text-primary">
                 {t('ABOUT_CARD_TITLE_2')}
               </Title>
@@ -48,7 +49,7 @@ const About = () => {
               </Title>
             </Card>
             <Card className="aboutCard">
-              <FaBrain size={20}/>
+              <FaBrain size={20} />
               <Title level={4} className="text-primary">
                 {t('ABOUT_CARD_TITLE_3')}
               </Title>
@@ -61,7 +62,10 @@ const About = () => {
             {t('ABOUT_PROFILE')}
           </Text>
         </div>
-        <DownloadButton cv={"/github-portfolio/assets/Omer-Cetinadam-Resume.pdf"} />
+        <div className='about_buttons'>
+          <ShowCVButton cv={"/github-portfolio/assets/Omer-Cetinadam-Resume.pdf"} />
+          <DownloadButton cv={"/github-portfolio/assets/Omer-Cetinadam-Resume.pdf"} />
+        </div>
       </Card>
     </motion.section>
   )
