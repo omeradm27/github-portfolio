@@ -33,7 +33,7 @@ const HomeContent = () => {
             className="py-3 px-6 text-black text-lg font-semibold hover:bg-blue-700 transition-all duration-300 ease-in-out"
             onClick={e => {
               e.preventDefault();
-              const target = document.getElementById('contract');
+              const target = document.getElementById('contact');
               if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
               }
