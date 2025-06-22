@@ -26,14 +26,9 @@ Welcome to my personal portfolio built with modern web technologies. This projec
 - Tailwind CSS, Ant Design
 - i18n (multi-language)
 
-**Backend (project references)**
-- Node.js, Express, Fastify, .NET Core, Laravel
-
-**Databases**
-- PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ
 
 **CI/CD**
-- GitHub Actions, Vercel, Azure Pipelines
+- GitHub Actions, Vercel
 
 ---
 
@@ -42,14 +37,14 @@ Welcome to my personal portfolio built with modern web technologies. This projec
 ```
 ├── public/
 │   └── assets/             # Logos, images
+│   └── locales/            # JSON files for translations
 ├── src/
 │   ├── components/         # Reusable UI components (e.g. Header, Footer)
 │   ├── pages/              # Main sections: Home, About, Projects...
 │   ├── layout/             # Layout wrapper
 │   ├── i18n/               # Internationalization config
 │   ├── App.jsx             # Router & layout
-│   └── main.jsx            # App entry
-├── locales/                # JSON files for translations
+│   └── index.jsx            # App entry        
 ├── vite.config.js          # Vite config with base path
 └── README.md
 ```
