@@ -9,6 +9,7 @@
   "HEADER_PROJECTS": "Projeler",
   "HEADER_SKILLS": "Beceriler",
   "HEADER_CONTACT": "İletişim",
+  "HEADER_REFERENCES": "Referanslar",
   "ABOUT_TITLE": "Hakkımda",
   "ABOUT_SUBTITLE": "Bilgisayar Mühendisi | Tam Yığın Web Mühendisi",
   "ABOUT_PROFILE": "Bilgisayar Mühendisliği’nden mezun olduktan sonraki yıllarımda çeşitli projelerde yer aldım ve Full Stack alanında dikeyde uzmanlaşma yönünde karar verdim. .NET Core’dan Node.js’e, React ve Vue’dan mikroservis tasarımlarına kadar geniş bir yelpazede projeler ürettim. Azure tabanlı CI/CD süreçleri ve Docker konteynerleriyle kesintisiz, ölçeklenebilir çözümler geliştirdim. Amacım her zaman karmaşık problemleri basit, güvenilir ve ölçülebilir sonuçlara dönüştürmek.",
@@ -155,5 +156,15 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Güvenlik doğrulaması sona erdi, lütfen tekrar doğrulayın.",
   "PROJECTS_CAROUSEL_TITLE": "Öne Çıkan Projelerim",
   "VIEW_ALL_PROJECTS": "Tüm Projeleri Göster",
-  "FOOTER_COPYRIGHT": "Tüm Hakları Saklıdır. © 2023 Ömer Çetinadam. "
+  "FOOTER_COPYRIGHT": "Tüm Hakları Saklıdır. © 2023 Ömer Çetinadam. ",
+  "REFERENCES_TITLE": "Referanslar",
+  "REFERENCES_PEOPLE": "Beraber Çalıştığım Kişiler",
+  "REFERENCES_COMPANIES": "Beraber Çalıştığım Şirketler",
+  "REFERENCES_PEOPLE_TITLE_1": "Yazılım Geliştirici Takım Lideri",
+  "REFERENCES_PEOPLE_TITLE_2": "Full Stack Yazılımcı ",
+  "REFERENCES_PEOPLE_TITLE_3": "CEO",
+  "REFERENCES_PEOPLE_TITLE_4": "CTO",
+  "REFERENCES_PEOPLE_TITLE_5": "CEO of Infosim & Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Yazılım Eğitmeni",
+  "REFERENCES_PEOPLE_TITLE_7": "Uygulama Yöneticisi | YZ Editörü"
 }

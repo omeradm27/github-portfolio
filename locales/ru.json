@@ -66,7 +66,6 @@
   "EXPERIENCE_ENTRY_4_PERIOD": "12/2017 – 02/2018",
   "EXPERIENCE_ENTRY_4_LOCATION": "Стамбул, Турция",
   "EXPERIENCE_ENTRY_4_DETAILS": [],
-
   "EXPERIENCE_ENTRY_5_ROLE": "Разработчик электронной коммерции и личные проекты",
   "EXPERIENCE_ENTRY_5_COMPANY": "Фриланс и личные проекты",
   "EXPERIENCE_ENTRY_5_PERIOD": "02.2018 – 10.2022",
@@ -156,5 +155,16 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Срок действия Recaptcha истек",
   "PROJECTS_CAROUSEL_TITLE": "Избранные проекты",
   "VIEW_ALL_PROJECTS": "Просмотреть все проекты",
-  "FOOTER_COPYRIGHT": "Все права защищены © 2023 Омер Четинадам"
+  "FOOTER_COPYRIGHT": "Все права защищены © 2023 Омер Четинадам",
+  "HEADER_REFERENCES": "Референции",
+  "REFERENCES_TITLE": "Референции",
+  "REFERENCES_PEOPLE": "Люди, с которыми я работал",
+  "REFERENCES_COMPANIES": "Компании, в которых я работал",
+  "REFERENCES_PEOPLE_TITLE_1": "Руководитель команды разработчиков программного обеспечения",
+  "REFERENCES_PEOPLE_TITLE_2": "Разработчик полного цикла",
+  "REFERENCES_PEOPLE_TITLE_3": "Брокер по недвижимости",
+  "REFERENCES_PEOPLE_TITLE_4": "Технический директор",
+  "REFERENCES_PEOPLE_TITLE_5": "Генеральный директор Infosim & Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Преподаватель по разработке программного обеспечения",
+  "REFERENCES_PEOPLE_TITLE_7": "Менеджер по продукту | Редактор AI"
 }
