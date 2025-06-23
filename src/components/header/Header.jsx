@@ -6,18 +6,21 @@ import {
   FaBriefcase,
   FaFolderOpen,
   FaCog,
-  FaEnvelope
+  FaEnvelope,
+  FaHandshake
 } from 'react-icons/fa';
 import LanguageSelector from '../LanguageSelector';
 import './Header.css';
 
 const SECTIONS = [
-  { id: 'about',     labelKey: 'HEADER_ABOUT',     icon: <FaUser />         },
+  { id: 'about', labelKey: 'HEADER_ABOUT', icon: <FaUser /> },
   { id: 'education', labelKey: 'HEADER_EDUCATION', icon: <FaGraduationCap /> },
-  { id: 'experience',labelKey: 'HEADER_EXPERIENCE',icon: <FaBriefcase />    },
-  { id: 'projects',  labelKey: 'HEADER_PROJECTS',   icon: <FaFolderOpen />   },
-  { id: 'skills',    labelKey: 'HEADER_SKILLS',     icon: <FaCog />          },
-  { id: 'contact',   labelKey: 'HEADER_CONTACT',    icon: <FaEnvelope />      },
+  { id: 'experience', labelKey: 'HEADER_EXPERIENCE', icon: <FaBriefcase /> },
+  { id: 'projects', labelKey: 'HEADER_PROJECTS', icon: <FaFolderOpen /> },
+  { id: 'skills', labelKey: 'HEADER_SKILLS', icon: <FaCog /> },
+  { id: 'contact', labelKey: 'HEADER_CONTACT', icon: <FaEnvelope /> },
+  { id: 'references', labelKey: 'HEADER_REFERENCES', icon: <FaHandshake /> }
+
 ];
 
 export default function Header() {
