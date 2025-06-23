@@ -48,47 +48,47 @@ const peopleRefs = [
 const companyRefs = [
     {
         name: 'Tarım ve Orman Bakanlığı',
-        logo: '/assets/orman.png',
+        logo: '/github-portfolio/assets/orman.png',
         website: 'https://www.tarimorman.gov.tr/'
     },
     {
         name: 'Su Verimliliği ',
-        logo: '/assets/suverimliligi.png',
+        logo: '/github-portfolio/assets/suverimliligi.png',
         website: 'https://www.suverimliligi.gov.tr/'
     },
     {
         name: 'Çevre ve Şehircilik Bakanlığı',
-        logo: '/assets/cevre.png',
+        logo: '/github-portfolio/assets/cevre.png',
         website: 'https://www.tarimorman.gov.tr/'
     },
     {
         name: 'Sıfır Atık Vakfı',
-        logo: '/assets/SifirAtik.svg',
+        logo: '/github-portfolio/assets/SifirAtik.svg',
         website: 'https://sifiratikvakfi.org/tr'
     },
     {
         name: 'Ante Holding',
-        logo: '/assets/ante_logo.png',
+        logo: '/github-portfolio/assets/ante_logo.png',
         website: 'https://anteholding.com/'
     },
     {
         name: 'Infosim Yazılım & Bilişim',
-        logo: '/assets/infosim.png',
+        logo: '/github-portfolio/assets/infosim.png',
         website: 'https://infosim.com.tr/'
     },
     {
         name: 'Huawei R&D',
-        logo: '/assets/huawei.png',
+        logo: '/github-portfolio/assets/huawei.png',
         website: 'https://www.huawei.com/tr/'
     },
     {
         name: 'Vartur Real State',
-        logo: '/assets/vartur.jpg',
+        logo: '/github-portfolio/assets/vartur.jpg',
         website: 'https://vartur.com/'
     },
     {
         name: 'Rasoft Teknoloji Danışmanlık',
-        logo: '/assets/rasoft_logo.png',
+        logo: '/github-portfolio/assets/rasoft_logo.png',
         website: 'https://rasoft.com.tr/'
     },
 
