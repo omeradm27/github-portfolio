@@ -71,7 +71,7 @@
   "EXPERIENCE_ENTRY_5_PERIOD": "02.2018 – 10.2022",
   "EXPERIENCE_ENTRY_5_LOCATION": "Remote",
   "EXPERIENCE_ENTRY_5_DETAILS": [
-    "In meinem eigenen Unternehmen haben mein Partner und ich mehrere E-Commerce-Plattformen aufgebaut, gestartet und verwaltet.",
+    "In meinem eigenen Unternehmen haben mein Reference und ich mehrere E-Commerce-Plattformen aufgebaut, gestartet und verwaltet.",
     "Aufbau eines Bibliotheksverwaltungssystems zur Übung von CRUD-Operationen.",
     "Erstellung einer Q&A-Blog-Website mit Benutzerauthentifizierung und Moderationsfunktionen",
     "Entwicklung einer Todo-App mit dynamischen Filtern und Statusverwaltung",
@@ -155,5 +155,16 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha abgelaufen",
   "PROJECTS_CAROUSEL_TITLE": "Ausgewählte Projekte",
   "VIEW_ALL_PROJECTS": "Alle Projekte anzeigen",
-  "FOOTER_COPYRIGHT": "Alle Rechte vorbehalten. © 2023 Omer Cetinadam."
+  "FOOTER_COPYRIGHT": "Alle Rechte vorbehalten. © 2023 Omer Cetinadam.",
+  "HEADER_REFERENCES": "Referenzen",
+  "REFERENCES_TITLE": "Referenzen",
+  "REFERENCES_PEOPLE": "Personen, mit denen ich zusammengearbeitet habe",
+  "REFERENCES_COMPANIES": "Unternehmen, für die ich gearbeitet habe",
+  "REFERENCES_PEOPLE_TITLE_1": "Teamleiter Softwareentwicklung",
+  "REFERENCES_PEOPLE_TITLE_2": "Full-Stack-Entwickler",
+  "REFERENCES_PEOPLE_TITLE_3": "Immobilienmakler",
+  "REFERENCES_PEOPLE_TITLE_4": "CTO",
+  "REFERENCES_PEOPLE_TITLE_5": "CEO von Infosim & Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Ausbilder für Softwareentwicklung",
+  "REFERENCES_PEOPLE_TITLE_7": "Produktmanager | KI-Redakteur"
 }

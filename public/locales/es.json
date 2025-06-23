@@ -155,5 +155,16 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha caducado",
   "PROJECTS_CAROUSEL_TITLE": "Proyectos destacados",
   "VIEW_ALL_PROJECTS": "Ver todos los proyectos",
-  "FOOTER_COPYRIGHT": "Todos los derechos reservados. © 2023 Omer Cetinadam. "
+  "FOOTER_COPYRIGHT": "Todos los derechos reservados. © 2023 Omer Cetinadam. ",
+  "HEADER_REFERENCES": "Referencias",
+  "REFERENCES_TITLE": "Referencias",
+  "REFERENCES_PEOPLE": "Personas con las que he trabajado",
+  "REFERENCES_COMPANIES": "Empresas para las que he trabajado",
+  "REFERENCES_PEOPLE_TITLE_1": "Jefe de equipo de desarrolladores de software",
+  "REFERENCES_PEOPLE_TITLE_2": "Desarrollador full stack",
+  "REFERENCES_PEOPLE_TITLE_3": "Agente inmobiliario",
+  "REFERENCES_PEOPLE_TITLE_4": "Director técnico",
+  "REFERENCES_PEOPLE_TITLE_5": "Director ejecutivo de Infosim y Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Instructor de desarrollo de software",
+  "REFERENCES_PEOPLE_TITLE_7": "Gerente de producto | Editor de IA"
 }

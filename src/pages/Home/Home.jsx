@@ -11,6 +11,7 @@ import Contact from '../Contact/Contact'
 import Projects from '../Projects/Projects'
 import Scrollup from '../../components/Scrollup'
 import {projectsData} from '../../data/projectData'
+import References from '../References/References'
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
@@ -26,6 +27,7 @@ const Home = () => {
     { id: 'experience', Component: Experience },
     { id: 'projects', Component: Projects },
     { id: 'skills', Component: Skills },
+    { id: 'references', Component: References },
     { id: 'contact', Component: Contact }
   ]
 

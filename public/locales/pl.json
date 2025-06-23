@@ -71,7 +71,7 @@
   "EXPERIENCE_ENTRY_5_PERIOD": "02.2018 – 10.2022",
   "EXPERIENCE_ENTRY_5_LOCATION": "Praca zdalna",
   "EXPERIENCE_ENTRY_5_DETAILS": [
-    "W mojej własnej firmie wraz z partnerem stworzyliśmy, uruchomiliśmy i zarządzaliśmy wieloma platformami e-commerce.",
+    "W mojej własnej firmie wraz z referenceem stworzyliśmy, uruchomiliśmy i zarządzaliśmy wieloma platformami e-commerce.",
     "Stworzyłem system zarządzania biblioteką, aby ćwiczyć operacje CRUD.",
     "Stworzyłem blog z pytaniami i odpowiedziami z funkcjami uwierzytelniania użytkowników i moderacji.",
     "Opracowałem aplikację Todo z dynamicznymi filtrami i zarządzaniem stanem.",
@@ -155,5 +155,16 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Wygasła ważność Recaptcha",
   "PROJECTS_CAROUSEL_TITLE": "Polecane projekty",
   "VIEW_ALL_PROJECTS": "Wyświetl wszystkie projekty",
-  "FOOTER_COPYRIGHT": "Wszelkie prawa zastrzeżone  © 2023 Omer Cetinadam"
+  "FOOTER_COPYRIGHT": "Wszelkie prawa zastrzeżone  © 2023 Omer Cetinadam",
+  "HEADER_REFERENCES": "Referencje",
+  "REFERENCES_TITLE": "Referencje",
+  "REFERENCES_PEOPLE": "Osoby, z którymi współpracowałem",
+  "REFERENCES_COMPANIES": "Firmy, dla których pracowałem",
+  "REFERENCES_PEOPLE_TITLE_1": "Kierownik zespołu programistów",
+  "REFERENCES_PEOPLE_TITLE_2": "Programista Full Stack",
+  "REFERENCES_PEOPLE_TITLE_3": "Pośrednik nieruchomości",
+  "REFERENCES_PEOPLE_TITLE_4": "Dyrektor ds. technologii",
+  "REFERENCES_PEOPLE_TITLE_5": "Dyrektor generalny Infosim & Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Instruktor programowania",
+  "REFERENCES_PEOPLE_TITLE_7": "Menedżer produktu | Redakto"
 }
