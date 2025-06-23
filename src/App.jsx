@@ -6,6 +6,7 @@ import './i18n';
 import MainLayout from './layout/MainLayout';
 import SocialMedia from './components/SocialMedia';
 import Loading from './components/Loading';
+import References from './pages/References/References';
 
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const About = React.lazy(() => import('./pages/About/About'));
@@ -41,6 +42,7 @@ function AnimatedRoutes() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/skills" element={<Skills />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/references" element={<References />} />
     </Routes>
   );
 }

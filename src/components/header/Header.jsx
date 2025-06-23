@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope, FaHandshake } from 'react-icons/fa';
 import LanguageSelector from './../LanguageSelector';
 import './Header.css';
 
@@ -55,6 +55,7 @@ const Header = () => {
               { key: 'projects', label: t('HEADER_PROJECTS'), icon: <FaFolderOpen /> },
               { key: 'skills', label: t('HEADER_SKILLS'), icon: <FaCog /> },
               { key: 'contact', label: t('HEADER_CONTACT'), icon: <FaEnvelope /> },
+              { key: 'references', label: t('HEADER_REFERENCES'), icon: <FaHandshake /> }
             ].map(({ key, label, icon }) => (
               <li key={key} className="nav__item">
                 <NavLink

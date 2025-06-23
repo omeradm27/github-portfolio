@@ -9,6 +9,7 @@
   "HEADER_PROJECTS": "Projects",
   "HEADER_SKILLS": "Skills",
   "HEADER_CONTACT": "Contact",
+  "HEADER_REFERENCES": "References",
   "ABOUT_TITLE": "About Me",
   "ABOUT_SUBTITLE": "Computer Engineer | Full Stack Engineer",
   "ABOUT_PROFILE": "After graduating with a degree in Computer Engineering, I participated in a variety of projects and chose to specialize vertically in Full Stack development. I’ve delivered solutions across a broad spectrum—from .NET Core and Node.js to React, Vue, and microservice architectures. By leveraging Azure-based CI/CD pipelines and Docker containers, I’ve built seamless, scalable systems. My goal is always to turn complex problems into simple, reliable, and measurable results.",
@@ -40,7 +41,7 @@
     "Architected & deployed a .NET Core/Node.js/Vue.js microservices ecosystem for Ante’s crypto exchange, boosting throughput by 50% and supporting 10K TPS.",
     "Implemented Redis caching and RabbitMQ messaging to cut transaction latency by 30%, ensuring sub-second trade execution under peak loads.",
     "Automated end-to-end CI/CD with Azure DevOps, slashing deployment times to under 5 minutes and enabling twice-weekly releases.",
-    "Partnered with QA and DevOps on 99.9% uptime SLAs, security audits, and integration of new financial instruments."
+    "Referenceed with QA and DevOps on 99.9% uptime SLAs, security audits, and integration of new financial instruments."
   ],
   "EXPERIENCE_ENTRY_2_ROLE": "Full Stack Developer",
   "EXPERIENCE_ENTRY_2_COMPANY": "Vartur Real Estate",
@@ -71,7 +72,7 @@
   "EXPERIENCE_ENTRY_5_PERIOD": "02.2018 – 10.2022",
   "EXPERIENCE_ENTRY_5_LOCATION": "Remote",
   "EXPERIENCE_ENTRY_5_DETAILS": [
-    "At my own company, my partner and I built, launched, and managed multiple e-commerce platforms.",
+    "At my own company, my reference and I built, launched, and managed multiple e-commerce platforms.",
     "Built a Library Management System to practice CRUD operations.",
     "Created a Q&A blog site with user authentication and moderation features.",
     "Developed a Todo App with dynamic filters and state management.",
@@ -155,5 +156,15 @@
   "CONTACT_RECAPTCHA_EXPIRED": "Recaptcha expired",
   "PROJECTS_CAROUSEL_TITLE": "Featured Projects",
   "VIEW_ALL_PROJECTS": "View All Projects",
-  "FOOTER_COPYRIGHT": "All rights reserved. © 2023 Omer Cetinadam."
+  "FOOTER_COPYRIGHT": "All rights reserved. © 2023 Omer Cetinadam.",
+  "REFERENCES_TITLE": "References",
+  "REFERENCES_PEOPLE": "People I’ve Worked With",
+  "REFERENCES_COMPANIES": "Companies I’ve Worked For",
+  "REFERENCES_PEOPLE_TITLE_1": "Software Developer Team Lead",
+  "REFERENCES_PEOPLE_TITLE_2": "Full Stack Developer @",
+  "REFERENCES_PEOPLE_TITLE_3": "Real Estate Broker",
+  "REFERENCES_PEOPLE_TITLE_4": "CTO",
+  "REFERENCES_PEOPLE_TITLE_5": "CEO of Infosim & Azadisoft",
+  "REFERENCES_PEOPLE_TITLE_6": "Software Development Instructor",
+  "REFERENCES_PEOPLE_TITLE_7": "Product Manager | AI Editor"
 }

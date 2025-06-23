@@ -29,6 +29,7 @@
   object-fit: cover;
 }
 
+
 @media (max-width: 768px) {
   .projects__section {
     padding: 1rem;
