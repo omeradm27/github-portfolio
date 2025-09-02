@@ -16,7 +16,7 @@ import { t } from "i18next";
       institution: t('EDUCATION_ENTRY_1_INSTITUTION'),
       period: t('EDUCATION_ENTRY_1_PERIOD'),
       location: t('EDUCATION_ENTRY_1_LOCATION'),
-      logo: "/assets/ikhal.png",
+      logo: "/assets/ikhal.webp",
       link: "https://ikhal.meb.k12.tr/"
     },
   ]

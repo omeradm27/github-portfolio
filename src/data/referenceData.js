@@ -48,7 +48,7 @@ const peopleRefs = [
 const companyRefs = [
     {
         name: 'Tarım ve Orman Bakanlığı',
-        logo: '/assets/orman.png',
+        logo: '/assets/orman.webp',
         website: 'https://www.tarimorman.gov.tr/'
     },
     {

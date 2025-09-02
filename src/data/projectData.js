@@ -23,7 +23,7 @@ export const projectsData = [
         ],
         technologies: ['Next.js', 'Redis', 'Vercel', 'OpenAI GPT-4'],
         live: 'https://zerowastegpt.org/',
-        logo: '/assets/ZerowasteGPT.png'
+        logo: '/assets/ZerowasteGPT.webp'
     },
     {
         title: t('PROJECTS_EASYCRM_TITLE'),
@@ -62,7 +62,7 @@ export const projectsData = [
         ],
         technologies: ['PHP', 'Laravel', 'Vue.js', 'Prisma', 'Docker', 'Redis', 'RabbitMQ', 'MongoDB', 'MySQL'],
         live: 'http://vartur.com/',
-        logo: '/assets/Vartur.png'
+        logo: '/assets/vartur.webp'
     },
     {
         title: t('PROJECTS_RASOFT_TITLE'),
@@ -91,7 +91,7 @@ export const projectsData = [
         ],
         technologies: ["React", "Node.js", "Express", "MySQL", "Nginx", "Tailwind CSS", "Ant Design", "JWT Auth"],
         live: "https://ndkdanismanlik.com/",
-        logo: "/assets/ndk.png"
+        logo: "/assets/ndk.webp"
     },
     {
         title: t('PROJECTS_LIBRARY_TITLE'),
