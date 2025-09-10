@@ -91,7 +91,7 @@
   "SKILLS_TITLE": "Yetenekler",
   "CONTACT_TITLE": "İletişim",
   "PROJECTS_FELIXO_TITLE": "Felixo",
-  "PROJECTS_FELIXO_COMPANY": "Ante Holding",
+  "PROJECTS_FELIXO_COMPANY": "Symmectric Holding",
   "PROJECTS_FELIXO_PERIOD": "05/2024 – Günümüz",
   "PROJECTS_FELIXO_DETAILS_1": ".NET Core, Node.js ve Vue.js ile güvenli ve yüksek performanslı bir işlem platformuna katkı sağlandı.",
   "PROJECTS_FELIXO_DETAILS_2": "Redis önbellekleme ve RabbitMQ mesajlaşma entegrasyonu ile gecikme %30 azaltıldı.",
