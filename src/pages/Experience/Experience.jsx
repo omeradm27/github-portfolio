@@ -11,6 +11,13 @@ const Experience = () => {
 
   const experienceData = [
     {
+      role: t('EXPERIENCE_ENTRY_0_ROLE'),
+      company: t('EXPERIENCE_ENTRY_0_COMPANY'),
+      period: t('EXPERIENCE_ENTRY_0_PERIOD'),
+      location: t('EXPERIENCE_ENTRY_0_LOCATION'),
+      details: t('EXPERIENCE_ENTRY_0_DETAILS', { returnObjects: true }),
+    },
+    {
       role: t('EXPERIENCE_ENTRY_1_ROLE'),
       company: t('EXPERIENCE_ENTRY_1_COMPANY'),
       period: t('EXPERIENCE_ENTRY_1_PERIOD'),

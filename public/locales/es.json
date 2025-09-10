@@ -32,32 +32,41 @@
   "EDUCATION_ENTRY_2_PERIOD": "09/2012 – 06/2017",
   "EDUCATION_ENTRY_2_LOCATION": "Ankara, Turquía",
   "EXPERIENCE_TITLE": "Experiencia profesional",
-  "EXPERIENCE_ENTRY_1_ROLE": "Ingeniero de software",
-  "EXPERIENCE_ENTRY_1_COMPANY": "Ante Holding",
-  "EXPERIENCE_ENTRY_1_PERIOD": "04/2024 – Actualidad",
-  "EXPERIENCE_ENTRY_1_LOCATION": "Estambul, Turquía",
-  "EXPERIENCE_ENTRY_1_DETAILS": [
-    "Diseñé e implementé un ecosistema de microservicios .NET Core/Node.js/Vue.js para la plataforma de intercambio de criptomonedas de Ante, lo que aumentó el rendimiento en un 50 % y permitió alcanzar los 10 000 TPS.",
+  "EXPERIENCE_ENTRY_0_ROLE": "Ingeniero jefe de equipo Full Stack",
+  "EXPERIENCE_ENTRY_0_COMPANY": "Symmetric Holding",
+  "EXPERIENCE_ENTRY_0_PERIOD": "01/2025 – 08/2025",
+  "EXPERIENCE_ENTRY_0_LOCATION": "Estambul, Turquía",
+  "EXPERIENCE_ENTRY_0_DETAILS": [
+    "Diseñé e implementé un ecosistema de microservicios .NET Core/Node.js/Vue.js para el intercambio de criptomonedas, lo que aumentó el rendimiento en un 50 % y admitió 10 000 TPS.",
     "Implementé el almacenamiento en caché Redis y la mensajería RabbitMQ para reducir la latencia de las transacciones en un 30 %, lo que garantiza la ejecución de operaciones en menos de un segundo en momentos de máxima carga",
     "Automatizé la CI/CD de extremo a extremo con Azure DevOps, lo que redujo los tiempos de implementación a menos de 5 minutos y permitió lanzamientos dos veces por semana",
-    "Colaboración con QA y DevOps en acuerdos de nivel de servicio (SLA) con un tiempo de actividad del 99,9 %, auditorías de seguridad e integración de nuevos instrumentos financieros."
+    "Referenciado con QA y DevOps en SLA con un tiempo de actividad del 99,9 %, auditorías de seguridad e integración de nuevos instrumentos financieros"
   ],
-  "EXPERIENCE_ENTRY_2_ROLE": "Desarrollador Full Stack",
+  "EXPERIENCE_ENTRY_1_ROLE": "Ingeniero de software full stack",
+  "EXPERIENCE_ENTRY_1_COMPANY": "Felixo Teknoloji ve Yazılım A.Ş.",
+  "EXPERIENCE_ENTRY_1_PERIOD": "10/2023 – 01/2025",
+  "EXPERIENCE_ENTRY_1_LOCATION": "Estambul, Turquía",
+  "EXPERIENCE_ENTRY_1_DETAILS": [
+    "Trabajé en el backend y el frontend de un ecosistema de microservicios .NET Core/Node.js/Vue.js para el intercambio de criptomonedas",
+    "He actualizado los servicios .NetCore y los he optimizado. He implementado el almacenamiento en caché Redis y la mensajería RabbitMQ para reducir la latencia de las transacciones en un 30 %, lo que garantiza la ejecución de operaciones en menos de un segundo en momentos de máxima carga ",
+    "He implementado la autenticación 2FA y he aumentado el nivel de seguridad"
+],
+  "EXPERIENCE_ENTRY_2_ROLE": "Ingeniero full stack",
   "EXPERIENCE_ENTRY_2_COMPANY": "Vartur Real Estate",
   "EXPERIENCE_ENTRY_2_PERIOD": "07/2023 – 02/2024",
   "EXPERIENCE_ENTRY_2_LOCATION": "Estambul, Turquía",
   "EXPERIENCE_ENTRY_2_DETAILS": [
-    "Dirigí la migración a una arquitectura de microservicios de 13 repositorios, estandarizando con Docker y Prisma para acelerar la entrega de funciones",
-    "Diseñé un sistema de mensajería basado en RabbitMQ y un sistema de almacenamiento en caché Redis para lograr una comunicación entre servicios fiable y de baja latencia.",
+    "Dirigí la migración a una arquitectura de microservicios de 13 repositorios, estandarizando con Docker y Prisma para acelerar la entrega de funciones.",
+    "Diseñé un sistema de mensajería basado en RabbitMQ y un sistema de almacenamiento en caché Redis para garantizar una comunicación entre servicios fiable y de baja latencia.",
     "Creé el portal público (PHP/Laravel, Vue.js) y el panel de administración (TypeScript, Vue.js, Prisma), lo que permitió ofrecer una experiencia de usuario coherente y receptiva."
   ],
-  "EXPERIENCE_ENTRY_3_ROLE": "Desarrollador full stack",
+  "EXPERIENCE_ENTRY_3_ROLE": "Ingeniero full stack",
   "EXPERIENCE_ENTRY_3_COMPANY": "RAsoft Technologies, Software and Consulting Services",
   "EXPERIENCE_ENTRY_3_PERIOD": "10/2022 – 07/2023",
   "EXPERIENCE_ENTRY_3_LOCATION": "Estambul, Turquía",
   "EXPERIENCE_ENTRY_3_DETAILS": [
     "Entregué el proyecto Catering de principio a fin con React/Redux, Node.js/Express y PostgreSQL, mejorando los flujos de trabajo de reserva.",
-    "Desarrollé un menú de disponibilidad dinámico que redujo los errores de programación y las solicitudes de asistencia en más de un 25 %",
+    "Desarrollé un menú dinámico de disponibilidad que redujo los errores de programación y las solicitudes de asistencia en más de un 25 %",
     "Optimicé las API RESTful y las consultas SQL, mejorando los tiempos de carga de las páginas en un 40 %",
     "Colaboré con diseñadores de UX para perfeccionar los diseños responsivos, lo que aumentó la participación en la web y en los dispositivos móviles"
   ],
@@ -66,13 +75,13 @@
   "EXPERIENCE_ENTRY_4_PERIOD": "12/2017 – 02/2018",
   "EXPERIENCE_ENTRY_4_LOCATION": "Estambul, Turquía",
   "EXPERIENCE_ENTRY_4_DETAILS": [],
-  "EXPERIENCE_ENTRY_5_ROLE": "Desarrollador de comercio electrónico y proyectos personales",
-  "EXPERIENCE_ENTRY_5_COMPANY": "Autónomo y proyectos personales",
+  "EXPERIENCE_ENTRY_5_ROLE": "Desarrollador de comercio electrónico e ingeniero full stack",
+  "EXPERIENCE_ENTRY_5_COMPANY": "Proyectos personales y como autónomo",
   "EXPERIENCE_ENTRY_5_PERIOD": "02.2018 – 10.2022",
   "EXPERIENCE_ENTRY_5_LOCATION": "Remoto",
   "EXPERIENCE_ENTRY_5_DETAILS": [
-    "En mi propia empresa, mi socio y yo creamos, lanzamos y gestionamos múltiples plataformas de comercio electrónico.",
-    "Creé un sistema de gestión de bibliotecas para practicar operaciones CRUD.",
+    "En mi propia empresa, mi referencia y yo creamos, lanzamos y gestionamos múltiples plataformas de comercio electrónico",
+    "Creé un sistema de gestión de bibliotecas para practicar operaciones CRUD",
     "Creé un blog de preguntas y respuestas con funciones de autenticación de usuarios y moderación.",
     "Desarrollé una aplicación de tareas con filtros dinámicos y gestión de estados.",
     "Implementé un editor de tablas dinámico para la manipulación de datos personalizados."
