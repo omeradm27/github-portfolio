@@ -90,7 +90,7 @@
   "SKILLS_TITLE": " Compétences ",
   "CONTACT_TITLE": " Contact ",
   "PROJECTS_FELIXO_TITLE": " Felixo ",
-  "PROJECTS_FELIXO_COMPANY": " Ante Holding ",
+  "PROJECTS_FELIXO_COMPANY": " Symmectric Holding ",
   "PROJECTS_FELIXO_PERIOD": " 05/2024 – Présent ",
   "PROJECTS_FELIXO_DETAILS_1": " Contribution à une plateforme de trading sécurisée et hautement performante basée sur .NET Core, Node.js et Vue.js. ",
   "PROJECTS_FELIXO_DETAILS_2": " Intégration du cache Redis et de la messagerie RabbitMQ → réduction de 30 % de la latence. ",

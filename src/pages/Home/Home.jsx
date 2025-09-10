@@ -5,9 +5,10 @@ import { ArrowRightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
 import ProjectCarousel from '../../components/projectCarousel/ProjectCarousel';
-import { projectsData } from '../../data/projectData';
+import { getProjectsData } from '../../data/projectData';
 const Home = () => {
   const { t } = useTranslation();
+  const projectsData = getProjectsData(t);
   return (
     <motion.section
       className="home section bg-gray-100 py-16"

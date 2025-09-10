@@ -67,9 +67,9 @@ const companyRefs = [
         website: 'https://sifiratikvakfi.org/tr'
     },
     {
-        name: 'Ante Holding',
-        logo: '/assets/ante_logo.png',
-        website: 'https://anteholding.com/'
+        name: 'Symmectric Holding',
+        logo: '/assets/symmetric-logo.png',
+        website: 'https://www.symmetricholding.com/'
     },
     {
         name: 'Infosim Yazılım & Bilişim',

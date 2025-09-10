@@ -1,6 +1,4 @@
-import { t } from "i18next";
-
-export const projectsData = [
+export const getProjectsData = (t) => [
     {
         title: t('PROJECTS_FELIXO_TITLE'),
         company: t('PROJECTS_FELIXO_COMPANY'),
@@ -118,5 +116,4 @@ export const projectsData = [
         live: 'https://ayakizi.suverimliligi.gov.tr/',
         logo: '/assets/water-footprint.png'
     }
-
 ]

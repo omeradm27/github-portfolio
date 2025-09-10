@@ -90,7 +90,7 @@
   "SKILLS_TITLE": "Habilidades",
   "CONTACT_TITLE": "Contacto",
   "PROJECTS_FELIXO_TITLE": "Felixo",
-  "PROJECTS_FELIXO_COMPANY": "Ante Holding",
+  "PROJECTS_FELIXO_COMPANY": "Symmectric Holding",
   "PROJECTS_FELIXO_PERIOD": "05/2024 – Actualidad",
   "PROJECTS_FELIXO_DETAILS_1": "Contribución a una plataforma comercial segura y de alto rendimiento basada en .NET Core, Node.js y Vue.js",
   "PROJECTS_FELIXO_DETAILS_2": "Integración del almacenamiento en caché Redis y la mensajería RabbitMQ → 30 % menos de latencia.",

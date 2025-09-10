@@ -17,13 +17,14 @@ import {
   InfoCircleOutlined
 } from '@ant-design/icons'
 import './Projects.css'
-import {projectsData} from '../../data/projectData'
+import {getProjectsData} from '../../data/projectData'
 const { Title, Text, Paragraph } = Typography
 const { Meta } = Card
 
 export default function Projects() {
   const { t } = useTranslation()
   const [selected, setSelected] = useState(null)
+  const projectsData = getProjectsData(t)
 
   return (
     <>
