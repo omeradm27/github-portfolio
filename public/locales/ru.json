@@ -90,7 +90,7 @@
   "SKILLS_TITLE": "Навыки",
   "CONTACT_TITLE": "Контакты",
   "PROJECTS_FELIXO_TITLE": "Felixo",
-  "PROJECTS_FELIXO_COMPANY": "Ante Holding",
+  "PROJECTS_FELIXO_COMPANY": "Symmectric Holding",
   "PROJECTS_FELIXO_PERIOD": "05/2024 – настоящее время",
   "PROJECTS_FELIXO_DETAILS_1": "Внес вклад в создание безопасной высокопроизводительной торговой платформы, построенной на .NET Core, Node.js и Vue.js",
   "PROJECTS_FELIXO_DETAILS_2": "Интегрировал кэширование Redis и обмен сообщениями RabbitMQ → снижение задержки на 30%",
