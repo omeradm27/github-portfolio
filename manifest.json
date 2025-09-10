@@ -1,25 +1,32 @@
 {
-  "short_name": "Ömer Çetinadam Portfolio",
-  "name": "Ömer Çetinadam Portfolio",
+  "short_name": "Ömer Çetinadam",
+  "name": "Ömer Çetinadam - Full Stack Developer Portfolio",
+  "description": "Professional portfolio of Ömer Çetinadam, Full Stack Developer specializing in React, Node.js, and modern web technologies",
   "icons": [
     {
-      "src": "logo_250.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "logo_125.png",
+      "sizes": "125x125",
       "type": "image/png"
     },
     {
       "src": "logo_250.png",
-      "type": "image/png",
-      "sizes": "250x250"
+      "sizes": "250x250",
+      "type": "image/png"
     },
     {
       "src": "logo.png",
-      "type": "image/png",
-      "sizes": "500x500"
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1890ff",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "tr",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
 }
