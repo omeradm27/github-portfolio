@@ -42,7 +42,7 @@ const Home = () => {
         {/* Right side: Profile Image */}
         <div className="home__right flex justify-center items-center flex-1">
           <div className="home__img w-40 h-40 rounded-full shadow-xl bg-cover bg-center"
-            style={{ backgroundImage: 'url("/assets/profile.jpg")' }}>
+            style={{ backgroundImage: `url("${import.meta.env.BASE_URL}assets/profile.webp")` }}>
           </div>
         </div>
 

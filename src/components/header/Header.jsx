@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaUser, FaGraduationCap, FaBriefcase, FaFolderOpen, FaCog, FaEnvelope, FaHandshake } from 'react-icons/fa';
 import LanguageSelector from './../LanguageSelector';
+import Signature from '../brand/Signature';
 import './Header.css';
 
 const Header = () => {
@@ -39,7 +40,7 @@ const Header = () => {
       <nav className="nav container">
         <div className="nav__mobile-wrapper">
           <NavLink to="/" className="nav__logo">
-            <img src='/assets/logo.png' alt="Ömer Çetinadam" className='logo' />
+            <Signature size="md" aria-label="Ömer Çetinadam" />
           </NavLink>
           <div className="nav__actions">
             {isMobile && <LanguageSelector />}

@@ -4,12 +4,14 @@ import { LinkedinOutlined, GlobalOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import './References.css';
 import Paragraph from 'antd/es/typography/Paragraph';
-import { peopleRefs, companyRefs } from '../../data/referenceData';
+import { getPeopleRefs, getCompanyRefs } from '../../data/referenceData';
 
 const { Title, Text } = Typography;
 
 export default function References() {
   const { t } = useTranslation();
+  const peopleRefs = getPeopleRefs(t);
+  const companyRefs = getCompanyRefs();
 
   return (
     <div className="references__section" id="references">
@@ -30,7 +32,7 @@ export default function References() {
                   <Col span={18}>
                     <Space direction="vertical" size="small">
                       <Text strong>{p.name}</Text>
-                      <Text>{t(p.title)}</Text>
+                      <Text>{p.title}</Text>
                       {p.company && <Text type="secondary">{p.company}</Text>}
                     </Space>
                   </Col>
@@ -58,30 +60,33 @@ export default function References() {
           {companyRefs.map((c, idx) => (
             <Col xs={24} sm={12} md={8} key={idx}>
               <Card
-                hoverable
-                onClick={() => window.open(c.website, '_blank')}
+                hoverable={!!c.website}
+                onClick={c.website ? () => window.open(c.website, '_blank') : undefined}
                 cover={
                   <img
-                    src={c.logo}
+                    src={import.meta.env.BASE_URL + c.logo}
                     alt={c.name}
+                    loading="lazy"
                     className="references__logo"
-                    style={{ padding: c.name === 'Vartur Real State' ? '2rem' : '1rem',  objectFit: 'contain' }}
+                    style={{ padding: c.logoPadding || '1rem', objectFit: 'contain' }}
                   />
                 }
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: c.website ? 'pointer' : 'default' }}
                 align="center"
               >
                 <Text strong>{c.name}</Text>
                 <br />
-                <Button
-                  type="link"
-                  href={c.website}
-                  icon={<GlobalOutlined />}
-                  target="_blank"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Website
-                </Button>
+                {c.website && (
+                  <Button
+                    type="link"
+                    href={c.website}
+                    icon={<GlobalOutlined />}
+                    target="_blank"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Website
+                  </Button>
+                )}
               </Card>
             </Col>
           ))}

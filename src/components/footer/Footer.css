@@ -31,6 +31,10 @@
   color: var(--primary-color, #1890ff);
 }
 
+.footer__signature {
+  opacity: 0.85;
+}
+
 .footer__copyright {
   font-size: 0.9rem;
   color: #888;
@@ -46,7 +50,11 @@
     font-size: 1.6rem;
   }
 
-  .footer__copyright {
+  .footer__signature {
+  opacity: 0.85;
+}
+
+.footer__copyright {
     font-size: 0.85rem;
   }
 }

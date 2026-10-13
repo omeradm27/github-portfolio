@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Ömer Çetinadam | Full-Stack Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio of Ömer Çetinadam, Computer Engineer and Full-Stack Developer based in Bremen, Germany.
+It is a single-page application: every section (home, featured projects, about, education, experience,
+projects, skills, references, contact) is rendered on one scrolling page.
 
-## Available Scripts
+## Live
 
-In the project directory, you can run:
+| Branch | Hosting | URL |
+| ------ | ------- | --- |
+| `main` | GitHub Pages (via GitHub Actions) | https://omeradm27.github.io/github-portfolio |
+| `test` | Vercel | https://www.omercetinadam.com |
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Fast, responsive SPA built with React and Vite
+- Seven languages (EN, TR, DE, ES, FR, PL, RU) with `i18next` / `react-i18next`, loaded on demand from `public/locales`
+- Language-aware CV: the "Show CV" / "Download CV" buttons serve the German CV for `de`, the English CV otherwise
+- Featured-projects carousel and project detail modals built with Ant Design
+- Section animations with `framer-motion`
+- Contact form via EmailJS, protected by Google reCAPTCHA
+- Deploy-agnostic asset paths (`import.meta.env.BASE_URL`), so the same data files work on GitHub Pages and Vercel
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **UI:** React 18, Ant Design 5, react-icons, utility CSS (Tailwind/WindiCSS classes) and plain CSS per section
+- **Build:** Vite 6, ESLint 9
+- **Routing:** React Router (`HashRouter`, required for GitHub Pages)
+- **i18n:** i18next + react-i18next + i18next-http-backend (7 languages)
+- **Animation:** framer-motion
+- **Contact:** EmailJS, react-google-recaptcha
+- **CI/CD:** GitHub Actions + `peaceiris/actions-gh-pages` (main), Vercel (test)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+├── .github/workflows/deploy.yml  # Build and deploy main to GitHub Pages
+├── public/
+│   ├── assets/                   # Project covers, company logos, CV PDFs (mostly WebP)
+│   ├── locales/                  # Translation files: en, tr, de, es, fr, pl, ru (.json)
+│   └── .nojekyll                 # Serve files as-is on GitHub Pages
+├── src/
+│   ├── components/               # Header, footer, carousel, language selector, buttons, ...
+│   ├── data/                     # Content builders: getProjectsData(t), getExperienceData(t),
+│   │                             # getEducationData(t), getPeopleRefs(t), getCompanyRefs()
+│   ├── layout/                   # Main layout (header, footer, social links)
+│   ├── pages/                    # Sections: Home, About, Education, Experience, Projects,
+│   │                             # Skills, References, Contact
+│   ├── i18n.js                   # i18next configuration
+│   ├── App.jsx                   # Router and layout
+│   └── index.jsx                 # Entry point
+├── index.html
+└── vite.config.js                # base: '/github-portfolio/' for GitHub Pages
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Texts live in `public/locales/*.json`; the files in `src/data` only hold keys, links,
+technologies and image paths (relative to `public/`, prefixed with `import.meta.env.BASE_URL` at render time).
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/omeradm27/github-portfolio.git
+cd github-portfolio
+npm ci
+npm run dev      # start the dev server
+npm run lint     # lint
+npm run build    # production build into dist/
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **GitHub Pages (`main`):** every push to `main` runs `.github/workflows/deploy.yml`: `npm ci`, `npm run build`,
+  copies `dist/index.html` to `dist/404.html` (SPA fallback) and publishes `dist/` to the `gh-pages` branch.
+  The workflow writes the repository secrets `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`,
+  `VITE_EMAILJS_PUBLIC_KEY` and `VITE_RECAPTCHA_SITE_KEY` into `.env.production` before building.
+- **Vercel (`test`):** deployed automatically by Vercel from the `test` branch (`vercel.json` rewrites all routes to the SPA).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Email: [omercetinadam.de@gmail.com](mailto:omercetinadam.de@gmail.com)
+- Phone: +49 178 4671335
+- LinkedIn: [linkedin.com/in/omercetinadam](https://www.linkedin.com/in/omercetinadam/)
+- GitHub: [github.com/omeradm27](https://github.com/omeradm27)
+- Website: [omercetinadam.com](https://www.omercetinadam.com)
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License — feel free to use and adapt it.

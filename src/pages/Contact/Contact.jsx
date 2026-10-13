@@ -10,10 +10,12 @@ import ReCAPTCHA from 'react-google-recaptcha'
 const { Title, Text } = Typography
 
 const contactData = {
-  email: 'omercetinadam1993@gmail.com',
-  phone: '+905518687754',
-  whatsapp: '+905518687754'
+  email: 'omercetinadam.de@gmail.com',
+  phone: '+49 178 4671335',
+  whatsapp: '+49 178 4671335'
 }
+
+const digitsOnly = (value) => value.replace(/[^\d]/g, '')
 
 const Contact = () => {
   const { t } = useTranslation()
@@ -85,7 +87,7 @@ const handleRecaptchaExpire = () => {
               icon={<WhatsAppOutlined style={{ fontSize: 24 }} />}
               label="WhatsApp"
               value={contactData.whatsapp}
-              href={`https://wa.me/${contactData.whatsapp.replace('+', '')}`}
+              href={`https://wa.me/${digitsOnly(contactData.whatsapp)}`}
               actionText={t('CONTACT_WRITE')}
             />
 
@@ -93,7 +95,7 @@ const handleRecaptchaExpire = () => {
               icon={<PhoneOutlined style={{ fontSize: 24 }} />}
               label={t('CONTACT_PHONE')}
               value={contactData.phone}
-              href={`tel:${contactData.phone}`}
+              href={`tel:+${digitsOnly(contactData.phone)}`}
               actionText={t('CONTACT_CALL')}
             />
           </Col>
