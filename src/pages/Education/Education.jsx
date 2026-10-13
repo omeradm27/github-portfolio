@@ -4,11 +4,12 @@ import { useTranslation } from 'react-i18next'
 import { Card, Typography, Flex } from 'antd'
 import './Education.css'
 import Link from 'antd/es/typography/Link'
-import { educationData } from '../../data/educationData'
+import { getEducationData } from '../../data/educationData'
 const { Title } = Typography
 
 const Education = () => {
   const { t } = useTranslation()
+  const educationData = getEducationData(t)
 
   return (
     <motion.section
@@ -29,7 +30,7 @@ const Education = () => {
             <Link href={item.link} target="_blank" key={idx}>
               <div className="education__item" key={idx}>
                 <div className="education__left">
-                  <img src={"/github-portfolio/" + item.logo} alt="logo" className="education__logo" />
+                  <img src={import.meta.env.BASE_URL + item.logo} alt={item.institution} loading="lazy" className="education__logo" />
                   <div className="education__period">{item.period}</div>
                 </div>
                 <div className="education__center">

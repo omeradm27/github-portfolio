@@ -1,122 +1,93 @@
-import { t } from "i18next";
+// Project data. Texts come from i18n (public/locales/*.json), so this is a
+// function of `t` and must be called inside a component (re-renders on language change).
+// `logo` paths are relative to the public folder; components prefix them with
+// import.meta.env.BASE_URL so the same file works on GitHub Pages and Vercel.
 
-export const projectsData = [
-    {
-        title: t('PROJECTS_FELIXO_TITLE'),
-        company: t('PROJECTS_FELIXO_COMPANY'),
-        period: t('PROJECTS_FELIXO_PERIOD'),
-        details: [
-            t('PROJECTS_FELIXO_DETAILS_1'),
-            t('PROJECTS_FELIXO_DETAILS_2'),
-            t('PROJECTS_FELIXO_DETAILS_3')
-        ],
-        technologies: ['.NET Core', 'Node.js', 'Vue.js', 'Redis', 'RabbitMQ'],
-        live: 'https://felixo.com',
-        logo: '/assets/Felixo.png'
-    },
-    {
-        title: t('PROJECTS_ZEROWASTEGPT_TITLE'),
-        period: t('PROJECTS_ZEROWASTEGPT_PERIOD'),
-        details: [
-            t('PROJECTS_ZEROWASTEGPT_DETAILS_1'),
-            t('PROJECTS_ZEROWASTEGPT_DETAILS_2')
-        ],
-        technologies: ['Next.js', 'Redis', 'Vercel', 'OpenAI GPT-4'],
-        live: 'https://zerowastegpt.org/',
-        logo: '/assets/ZerowasteGPT.png'
-    },
-    {
-        title: t('PROJECTS_EASYCRM_TITLE'),
-        period: t('PROJECTS_EASYCRM_PERIOD'),
-        details: [
-            t('PROJECTS_EASYCRM_DETAILS_1'),
-            t('PROJECTS_EASYCRM_DETAILS_2')
-        ],
-        technologies: ['React', 'TypeScript', 'Prisma', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
+const details = (t, key, count) =>
+    Array.from({ length: count }, (_, i) => t(`PROJECTS_${key}_DETAILS_${i + 1}`));
+
+const project = (t, key, count, rest) => ({
+    key,
+    title: t(`PROJECTS_${key}_TITLE`),
+    company: t(`PROJECTS_${key}_COMPANY`),
+    period: t(`PROJECTS_${key}_PERIOD`),
+    details: details(t, key, count),
+    ...rest,
+});
+
+export const getProjectsData = (t) => [
+    project(t, 'MULTIVIA', 4, {
+        technologies: ['NestJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'PostGIS', 'React', 'TanStack Router/Query', 'MapLibre', 'Flutter', 'OpenAPI', 'Vitest', 'Playwright', 'Railway'],
+        logo: 'assets/multivia.webp',
+    }),
+    project(t, 'NEVASCHOLAR', 4, {
+        technologies: ['NestJS', 'Next.js', 'React', 'TypeScript', 'Prisma', 'PostgreSQL', 'Redis', 'Bull', 'Stripe', 'Supabase', 'Railway', 'Vercel'],
+        live: 'https://nevascholar.com',
+        logo: 'assets/nevascholar.webp',
+    }),
+    project(t, 'ALBAMEDIA', 4, {
+        technologies: ['NestJS', 'MongoDB', 'React', 'Vite', 'MUI', 'TanStack Query', 'Google Cloud Storage', 'Shotstack', 'Docker', 'Railway', 'Vercel'],
+        live: 'https://albamedia.nl',
+        logo: 'assets/albamedia.webp',
+    }),
+    project(t, 'LOSTANDFOUND', 4, {
+        technologies: ['NestJS', 'Next.js', 'Prisma', 'PostgreSQL', 'MongoDB', 'Redis', 'iyzico', 'Docker', 'Nginx', 'GitHub Actions', 'Vercel'],
+        live: 'https://lostandfound.com.tr',
+        logo: 'assets/lostandfound.webp',
+    }),
+    project(t, 'NDK', 4, {
+        technologies: ['Node.js', 'Express', 'React', 'Vite', 'Prisma', 'PostgreSQL', 'Supabase', 'MySQL', 'Zustand', 'Tailwind CSS', 'Vercel'],
+        live: 'https://ndkdanismanlik.com',
+        logo: 'assets/ndk.webp',
+    }),
+    project(t, 'MTLMS', 3, {
+        technologies: ['Next.js', 'React', 'TypeScript', 'Prisma', 'PostgreSQL', 'TanStack Query', 'Cloudinary', 'Nodemailer'],
+        logo: 'assets/multitransport-lms.webp',
+    }),
+    project(t, 'DESIGNSMILE', 3, {
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'next-intl', 'Docker', 'GitHub Actions', 'Nginx', 'PM2'],
+        live: 'https://designsmileturkey.com',
+        logo: 'assets/designsmile.webp',
+    }),
+    project(t, 'PERSIY', 3, {
+        technologies: ['Next.js', 'React', 'TypeScript', 'MUI', 'Zustand', 'Express', 'Prisma', 'PostgreSQL', 'Firebase Auth', 'Vercel'],
+        live: 'https://persiy.com',
+        logo: 'assets/Persiy.webp',
+    }),
+    project(t, 'EASYCRM', 3, {
+        technologies: ['React', 'Ant Design', 'Redux Toolkit', 'Node.js', 'Express', 'TypeScript', 'Prisma', 'PostgreSQL', 'Firebase'],
         live: 'https://crm-test-frontend.vercel.app/',
-        logo: '/assets/Easy_Crm.png'
-    },
-    {
-        title: t('PROJECTS_PERSIY_TITLE'),
-        period: t('PROJECTS_PERSIY_PERIOD'),
-        details: [
-            t('PROJECTS_PERSIY_DETAILS_1'),
-            t('PROJECTS_PERSIY_DETAILS_2'),
-            t('PROJECTS_PERSIY_DETAILS_3'),
-            t('PROJECTS_PERSIY_DETAILS_4')
-        ],
-        technologies: ['React', 'Redux', 'Next.js', 'Prisma', 'PostgreSQL', 'GitHub Actions', 'Vercel'],
-        github: 'https://github.com/yourusername/persiy',
-        live: 'https://persiy-frontend.vercel.app/',
-        logo: '/assets/Persiy.png'
-    },
-    {
-        title: t('PROJECTS_VARTUR_TITLE'),
-        company: t('PROJECTS_VARTUR_COMPANY'),
-        period: t('PROJECTS_VARTUR_PERIOD'),
-        details: [
-            t('PROJECTS_VARTUR_DETAILS_1'),
-            t('PROJECTS_VARTUR_DETAILS_2'),
-            t('PROJECTS_VARTUR_DETAILS_3'),
-            t('PROJECTS_VARTUR_DETAILS_4')
-        ],
-        technologies: ['PHP', 'Laravel', 'Vue.js', 'Prisma', 'Docker', 'Redis', 'RabbitMQ', 'MongoDB', 'MySQL'],
-        live: 'http://vartur.com/',
-        logo: '/assets/Vartur.png'
-    },
-    {
-        title: t('PROJECTS_RASOFT_TITLE'),
-        period: t('PROJECTS_RASOFT_PERIOD'),
-        details: [
-            t('PROJECTS_RASOFT_DETAILS_1'),
-            t('PROJECTS_RASOFT_DETAILS_2'),
-            t('PROJECTS_RASOFT_DETAILS_3'),
-            t('PROJECTS_RASOFT_DETAILS_4')
-        ],
-        technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL'],
+        logo: 'assets/Easy_Crm.webp',
+    }),
+    project(t, 'ZEROWASTE', 3, {
+        technologies: ['React', 'Vite', 'MUI', 'TanStack Query', 'Formik', 'i18next', 'Nginx', 'PM2'],
+        live: 'https://zerowastegpt.org',
+        logo: 'assets/ZerowasteGPT.webp',
+    }),
+    project(t, 'FELIXO', 3, {
+        technologies: ['.NET Core', 'Node.js', 'Vue.js', 'Redis', 'RabbitMQ', 'Azure DevOps'],
+        live: 'https://felixo.com',
+        logo: 'assets/Felixo.webp',
+    }),
+    project(t, 'VARTUR', 3, {
+        technologies: ['PHP', 'Laravel', 'Vue.js', 'TypeScript', 'Prisma', 'Docker', 'Redis', 'RabbitMQ', 'MySQL', 'MongoDB'],
+        live: 'http://vartur.com',
+        logo: 'assets/vartur.webp',
+    }),
+    project(t, 'CATERING', 3, {
+        technologies: ['React', 'Redux Toolkit', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Stripe', 'Socket.IO', 'Cloudinary'],
         live: 'https://pys.rasoft.com.tr/',
-        logo: '/assets/Rasoft_PYS.png'
-    },
-    {
-        title: t('PROJECTS_NDK_TITLE'),
-        details: [
-            t('PROJECTS_NDK_DETAILS_1'),
-            t('PROJECTS_NDK_DETAILS_2'),
-            t('PROJECTS_NDK_DETAILS_3'),
-            t('PROJECTS_NDK_DETAILS_4'),
-            t('PROJECTS_NDK_DETAILS_5'),
-            t('PROJECTS_NDK_DETAILS_6'),
-            t('PROJECTS_NDK_DETAILS_7'),
-            t('PROJECTS_NDK_DETAILS_8')
-        ],
-        technologies: ["React", "Node.js", "Express", "MySQL", "Nginx", "Tailwind CSS", "Ant Design", "JWT Auth"],
-        live: "https://ndkdanismanlik.com/",
-        logo: "/assets/ndk.png"
-    },
-    {
-        title: t('PROJECTS_LIBRARY_TITLE'),
-        details: [
-            t('PROJECTS_LIBRARY_DETAILS_1'),
-            t('PROJECTS_LIBRARY_DETAILS_2'),
-            t('PROJECTS_LIBRARY_DETAILS_3'),
-            t('PROJECTS_LIBRARY_DETAILS_4')
-        ],
+        logo: 'assets/Rasoft_PYS.webp',
+    }),
+    project(t, 'LIBRARY', 4, {
         technologies: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'TypeScript'],
         live: 'https://library-app-web.vercel.app/',
         github: 'https://github.com/omeradm27/library-app-web',
-        logo: '/assets/libraryApp.png'
-    },
-    {
-        title: t('PROJECTS_WATERFOOTPRINT_TITLE'),
-        details: [
-            t('PROJECTS_WATERFOOTPRINT_DETAILS_1'),
-            t('PROJECTS_WATERFOOTPRINT_DETAILS_2'),
-            t('PROJECTS_WATERFOOTPRINT_DETAILS_3'),
-            t('PROJECTS_WATERFOOTPRINT_DETAILS_4')
-        ],
+        logo: 'assets/libraryApp.webp',
+    }),
+    project(t, 'WATERFOOTPRINT', 4, {
         technologies: ['React', 'Tailwind CSS', 'Vercel'],
         live: 'https://ayakizi.suverimliligi.gov.tr/',
-        logo: '/assets/water-footprint.png'
-    }
-
-]
+        logo: 'assets/water-footprint.webp',
+    }),
+];

@@ -11,7 +11,7 @@
 }
 
 body {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .nav {
@@ -32,11 +32,13 @@ body {
   text-decoration: none;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 20px #A6CBF5;
+.nav__logo .brand-signature {
+  padding: 0.35rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav__logo:hover .brand-signature {
+  opacity: 0.75;
 }
 
 /* DİL SEÇİCİ + TOGGLE */

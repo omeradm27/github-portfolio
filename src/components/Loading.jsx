@@ -1,25 +1,13 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Spin } from 'antd'
-import './Loading.css' // External CSS file
+import OrbitMark from './brand/OrbitMark'
+import Signature from './brand/Signature'
+import './Loading.css'
 
-const Loading = () => {
-  return (
-    <div className="loading__wrapper">
-      <motion.div
-        className="loading__spinner"
-        animate={{ rotate: 360 }}
-        transition={{
-          repeat: Infinity,
-          ease: 'linear',
-          duration: 1
-        }}
-      />
-      <p className="loading__text">
-        Loading...
-      </p>
-    </div>
-  )
-}
+const Loading = () => (
+  <div className="loading__wrapper" role="status" aria-live="polite">
+    <OrbitMark size={112} animate />
+    <Signature size="lg" className="loading__signature brand-signature--auto" />
+  </div>
+)
 
 export default Loading

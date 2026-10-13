@@ -1,39 +1,27 @@
-import { t } from "i18next";
+// Experience entries in page order. Texts come from i18n; call inside a
+// component with useTranslation()'s `t` so language switching re-renders.
 
-export const experienceData = [
-    {
-      role: t('EXPERIENCE_ENTRY_1_ROLE'),
-      company: t('EXPERIENCE_ENTRY_1_COMPANY'),
-      period: t('EXPERIENCE_ENTRY_1_PERIOD'),
-      location: t('EXPERIENCE_ENTRY_1_LOCATION'),
-      details: t('EXPERIENCE_ENTRY_1_DETAILS', { returnObjects: true }),
-    },
-    {
-      role: t('EXPERIENCE_ENTRY_2_ROLE'),
-      company: t('EXPERIENCE_ENTRY_2_COMPANY'),
-      period: t('EXPERIENCE_ENTRY_2_PERIOD'),
-      location: t('EXPERIENCE_ENTRY_2_LOCATION'),
-      details: t('EXPERIENCE_ENTRY_2_DETAILS', { returnObjects: true }),
-    },
-    {
-      role: t('EXPERIENCE_ENTRY_3_ROLE'),
-      company: t('EXPERIENCE_ENTRY_3_COMPANY'),
-      period: t('EXPERIENCE_ENTRY_3_PERIOD'),
-      location: t('EXPERIENCE_ENTRY_3_LOCATION'),
-      details: t('EXPERIENCE_ENTRY_3_DETAILS', { returnObjects: true }),
-    },
-    {
-      role: t('EXPERIENCE_ENTRY_5_ROLE'),
-      company: t('EXPERIENCE_ENTRY_5_COMPANY'),
-      period: t('EXPERIENCE_ENTRY_5_PERIOD'),
-      location: t('EXPERIENCE_ENTRY_5_LOCATION'),
-      details: t('EXPERIENCE_ENTRY_5_DETAILS', { returnObjects: true }),
-    },
-    {
-      role: t('EXPERIENCE_ENTRY_4_ROLE'),
-      company: t('EXPERIENCE_ENTRY_4_COMPANY'),
-      period: t('EXPERIENCE_ENTRY_4_PERIOD'),
-      location: t('EXPERIENCE_ENTRY_4_LOCATION'),
-      details: t('EXPERIENCE_ENTRY_4_DETAILS', { returnObjects: true }),
-    },
-  ]
+const EXPERIENCE_KEYS = [
+    'MULTITRANSPORT',
+    'FREELANCE',
+    'SYMMETRIC',
+    'FELIXO',
+    'VARTUR',
+    'RASOFT',
+    'FREELANCE_EARLY',
+    'HUAWEI',
+    'EDITSYSTEM',
+];
+
+export const getExperienceData = (t) =>
+    EXPERIENCE_KEYS.map((key) => {
+        const details = t(`EXPERIENCE_${key}_DETAILS`, { returnObjects: true });
+        return {
+            key,
+            role: t(`EXPERIENCE_${key}_ROLE`),
+            company: t(`EXPERIENCE_${key}_COMPANY`),
+            period: t(`EXPERIENCE_${key}_PERIOD`),
+            location: t(`EXPERIENCE_${key}_LOCATION`),
+            details: Array.isArray(details) ? details : [],
+        };
+    });

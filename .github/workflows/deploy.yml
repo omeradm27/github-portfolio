@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build app
         env:
           VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
@@ -29,8 +30,10 @@ jobs:
           echo "VITE_EMAILJS_TEMPLATE_ID=$VITE_EMAILJS_TEMPLATE_ID" >> .env.production
           echo "VITE_EMAILJS_PUBLIC_KEY=$VITE_EMAILJS_PUBLIC_KEY" >> .env.production
           npm run build
+          # SPA fallback for GitHub Pages
+          cp dist/index.html dist/404.html
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist

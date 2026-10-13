@@ -1,82 +1,171 @@
 // src/pages/Skills/Skills.jsx
-import React from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Row, Col, Card, Typography, Divider } from 'antd'
 import {
-  FaNodeJs,
-  FaJava,
-  FaDocker,
-  FaReact
+  FaCubes,
+  FaLayerGroup,
+  FaLanguage,
+  FaMapMarkedAlt,
+  FaDatabase,
+  FaCloud,
+  FaCreditCard,
+  FaMoneyCheckAlt,
+  FaShieldAlt,
+  FaSms,
+  FaEnvelope,
+  FaMicrophone,
+  FaVial,
+  FaKey,
+  FaProjectDiagram,
+  FaUserShield,
+  FaTasks
 } from 'react-icons/fa'
 import {
+  SiNodedotjs,
+  SiNestjs,
   SiExpress,
   SiTypescript,
+  SiJavascript,
+  SiDotnet,
+  SiFastify,
+  SiLaravel,
+  SiPython,
+  SiOpenapiinitiative,
+  SiSocketdotio,
+  SiRabbitmq,
+  SiReact,
+  SiNextdotjs,
   SiVuedotjs,
-  SiMongodb,
+  SiRedux,
+  SiReactquery,
+  SiTailwindcss,
+  SiMui,
+  SiAntdesign,
+  SiFlutter,
   SiPostgresql,
   SiMysql,
-  SiRedis,
-  SiRabbitmq,
-  SiGithubactions,
-  SiAzurepipelines,
-  SiOpenai,
-  SiVercel,
-  SiFastify,
-  SiDotnet,
-  SiAwsamplify,
   SiMicrosoftsqlserver,
-  SiPhp,
-  SiLaravel,
-  SiTailwindcss,
-  SiWindicss,
-  SiAntdesign,
-  SiNextdotjs,
+  SiMongodb,
+  SiRedis,
   SiPrisma,
   SiSequelize,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiRedux
+  SiSupabase,
+  SiDocker,
+  SiGithubactions,
+  SiAzuredevops,
+  SiVercel,
+  SiRailway,
+  SiNginx,
+  SiPm2,
+  SiLinux,
+  SiGooglecloud,
+  SiAmazons3,
+  SiStripe,
+  SiFirebase,
+  SiOpenai,
+  SiGoogle,
+  SiJest,
+  SiVitest,
+  SiPlaywright
 } from 'react-icons/si'
 import './Skills.css'
 
 const { Title, Text } = Typography
 
-const frontendCI = [
-  { name: 'ReactJS', icon: <FaReact size={32} /> },
-  { name: 'Redux', icon: <SiRedux size={32} /> },
-  { name: 'VueJS', icon: <SiVuedotjs size={32} /> },
-  { name: 'NextJS', icon: <SiNextdotjs size={32} /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss size={32} /> },
-  { name: 'Windmill UI', icon: <SiWindicss size={32} /> },
-  { name: 'Antdesign', icon: <SiAntdesign size={32} /> },
-  { name: 'HTML', icon: <SiHtml5 size={32} /> },
-  { name: 'CSS', icon: <SiCss3 size={32} /> },
-  { name: 'OpenAI API', icon: <SiOpenai size={32} /> },
-  { name: 'Docker', icon: <FaDocker size={32} /> },
-  { name: 'GitHub Actions', icon: <SiGithubactions size={32} /> },
-  { name: 'Azure Pipelines', icon: <SiAzurepipelines size={32} /> },
-  { name: 'AWS Cloud', icon: <SiAwsamplify size={32} /> },
-  { name: 'Vercel CI', icon: <SiVercel size={32} /> },
-]
+const ICON_SIZE = 32
 
-const backendDB = [
-  { name: 'NodeJS', icon: <FaNodeJs size={32} /> },
-  { name: 'ExpressJS', icon: <SiExpress size={32} /> },
-  { name: 'TypeScript', icon: <SiTypescript size={32} /> },
-  { name: 'Fastify', icon: <SiFastify size={32} /> },
-  { name: '.NET Core', icon: <SiDotnet size={32} /> },
-  { name: 'Javascript', icon: <SiJavascript size={32} /> },
-  { name: 'PHP', icon: <SiPhp size={32} /> },
-  { name: 'Prisma', icon: <SiPrisma size={32} /> },
-  { name: 'Sequelize', icon: <SiSequelize size={32} /> },
-  { name: 'MongoDB', icon: <SiMongodb size={32} /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql size={32} /> },
-  { name: 'MSSQL Server', icon: <SiMicrosoftsqlserver size={32} /> },
-  { name: 'MySQL', icon: <SiMysql size={32} /> },
-  { name: 'Redis', icon: <SiRedis size={32} /> },
-  { name: 'RabbitMQ', icon: <SiRabbitmq size={32} /> },
+// Generic icons (Fa*) are used where no brand icon exists.
+const SKILL_GROUPS = [
+  {
+    key: 'SKILLS_GROUP_BACKEND',
+    items: [
+      { name: 'Node.js', Icon: SiNodedotjs },
+      { name: 'NestJS', Icon: SiNestjs },
+      { name: 'Express', Icon: SiExpress },
+      { name: 'TypeScript', Icon: SiTypescript },
+      { name: 'JavaScript', Icon: SiJavascript },
+      { name: '.NET Core (C#)', Icon: SiDotnet },
+      { name: 'Fastify', Icon: SiFastify },
+      { name: 'PHP / Laravel', Icon: SiLaravel },
+      { name: 'Python (FastAPI)', Icon: SiPython },
+      { name: 'REST / OpenAPI', Icon: SiOpenapiinitiative },
+      { name: 'Microservices', Icon: FaProjectDiagram },
+      { name: 'RBAC / Multi-tenant', Icon: FaUserShield },
+      { name: 'SSE / WebSockets', Icon: SiSocketdotio },
+      { name: 'RabbitMQ', Icon: SiRabbitmq },
+      { name: 'Bull Queues', Icon: FaTasks },
+    ],
+  },
+  {
+    key: 'SKILLS_GROUP_FRONTEND',
+    items: [
+      { name: 'React', Icon: SiReact },
+      { name: 'Next.js', Icon: SiNextdotjs },
+      { name: 'Vue.js', Icon: SiVuedotjs },
+      { name: 'Redux Toolkit', Icon: SiRedux },
+      { name: 'Zustand', Icon: FaCubes },
+      { name: 'TanStack Query', Icon: SiReactquery },
+      { name: 'Tailwind CSS', Icon: SiTailwindcss },
+      { name: 'MUI', Icon: SiMui },
+      { name: 'Ant Design', Icon: SiAntdesign },
+      { name: 'shadcn/ui', Icon: FaLayerGroup },
+      { name: 'i18next / next-intl', Icon: FaLanguage },
+      { name: 'Flutter (Riverpod)', Icon: SiFlutter },
+    ],
+  },
+  {
+    key: 'SKILLS_GROUP_DATABASE',
+    items: [
+      { name: 'PostgreSQL', Icon: SiPostgresql },
+      { name: 'PostGIS', Icon: FaMapMarkedAlt },
+      { name: 'MySQL', Icon: SiMysql },
+      { name: 'MSSQL', Icon: SiMicrosoftsqlserver },
+      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'Redis', Icon: SiRedis },
+      { name: 'Prisma', Icon: SiPrisma },
+      { name: 'Sequelize', Icon: SiSequelize },
+      { name: 'Knex', Icon: FaDatabase },
+      { name: 'Supabase', Icon: SiSupabase },
+    ],
+  },
+  {
+    key: 'SKILLS_GROUP_DEVOPS',
+    items: [
+      { name: 'Docker', Icon: SiDocker },
+      { name: 'GitHub Actions', Icon: SiGithubactions },
+      { name: 'Azure DevOps', Icon: SiAzuredevops },
+      { name: 'Vercel', Icon: SiVercel },
+      { name: 'Railway', Icon: SiRailway },
+      { name: 'Nginx', Icon: SiNginx },
+      { name: 'PM2', Icon: SiPm2 },
+      { name: 'Linux VPS', Icon: SiLinux },
+      { name: 'Google Cloud Storage', Icon: SiGooglecloud },
+      { name: 'AWS S3', Icon: SiAmazons3 },
+      { name: 'Cloudinary', Icon: FaCloud },
+    ],
+  },
+  {
+    key: 'SKILLS_GROUP_INTEGRATIONS',
+    wide: true,
+    items: [
+      { name: 'Stripe', Icon: SiStripe },
+      { name: 'iyzico', Icon: FaCreditCard },
+      { name: 'Ozan Pay', Icon: FaMoneyCheckAlt },
+      { name: 'Firebase Auth', Icon: SiFirebase },
+      { name: 'OAuth 2.0', Icon: FaKey },
+      { name: 'TOTP 2FA', Icon: FaShieldAlt },
+      { name: 'NetGSM SMS', Icon: FaSms },
+      { name: 'Nodemailer', Icon: FaEnvelope },
+      { name: 'OpenAI', Icon: SiOpenai },
+      { name: 'Gemini / Veo 3', Icon: SiGoogle },
+      { name: 'ElevenLabs', Icon: FaMicrophone },
+      { name: 'Jest', Icon: SiJest },
+      { name: 'Vitest', Icon: SiVitest },
+      { name: 'Playwright', Icon: SiPlaywright },
+      { name: 'Supertest', Icon: FaVial },
+    ],
+  },
 ]
 
 export default function Skills() {
@@ -96,42 +185,28 @@ export default function Skills() {
           {t('SKILLS_TITLE')}
         </Title>
 
-        <Row gutter={24}>
-          {/* Backend & Database */}
-          <Col xs={24} md={12}>
-            <Card className="skills__group">
-              <Title level={4}>Backend & Database</Title>
-              <Divider />
-              <Row gutter={[16, 16]}>
-                {backendDB.map(({ name, icon }, i) => (
-                  <Col key={i} xs={12} sm={8} lg={8}>
-                    <Card hoverable className="skills__card">
-                      <div className="skills__icon">{icon}</div>
-                      <Text className="skills__text">{name}</Text>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Card>
-          </Col>
-
-          {/* Frontend & CI/CD */}
-          <Col xs={24} md={12}>
-            <Card className="skills__group">
-              <Title level={4}>Frontend & CI/CD</Title>
-              <Divider />
-              <Row gutter={[16, 16]}>
-                {frontendCI.map(({ name, icon }, i) => (
-                  <Col key={i} xs={12} sm={8} lg={8}>
-                    <Card hoverable className="skills__card">
-                      <div className="skills__icon">{icon}</div>
-                      <Text className="skills__text">{name}</Text>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Card>
-          </Col>
+        <Row gutter={[24, 24]}>
+          {SKILL_GROUPS.map(({ key, items, wide }) => (
+            <Col key={key} xs={24} lg={wide ? 24 : 12}>
+              <Card className="skills__group">
+                <Title level={4}>{t(key)}</Title>
+                <Divider />
+                <Row gutter={[16, 16]}>
+                  {items.map((item) => {
+                    const { name, Icon } = item
+                    return (
+                      <Col key={name} xs={12} sm={8} lg={wide ? 4 : 8}>
+                        <Card hoverable className="skills__card">
+                          <div className="skills__icon"><Icon size={ICON_SIZE} /></div>
+                          <Text className="skills__text">{name}</Text>
+                        </Card>
+                      </Col>
+                    )
+                  })}
+                </Row>
+              </Card>
+            </Col>
+          ))}
         </Row>
 
       </div>

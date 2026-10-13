@@ -10,6 +10,7 @@ import {
   FaHandshake
 } from 'react-icons/fa';
 import LanguageSelector from '../LanguageSelector';
+import Signature from '../brand/Signature';
 import './Header.css';
 
 const SECTIONS = [
@@ -82,7 +83,7 @@ export default function Header() {
         {/* logo + mobile toggle */}
         <div className="nav__mobile-wrapper">
           <a href="#about" className="nav__logo" onClick={scrollTo('about')}>
-            <img src="/github-portfolio/assets/logo.png" alt="Logo" className="logo" />
+            <Signature size="md" aria-label="Ömer Çetinadam" />
           </a>
           <div className="nav__actions">
             {window.innerWidth <= 768 && <LanguageSelector />}

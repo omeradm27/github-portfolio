@@ -1,7 +1,6 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Typography, Card, Space, Button } from 'antd'
+import { Typography, Card, Space } from 'antd'
 import './About.css'
 import { FaAward, FaBrain, FaBriefcase } from 'react-icons/fa'
 import DownloadButton from '../../components/DownloadButton'
@@ -10,7 +9,12 @@ import ShowCVButton from '../../components/ShowCVButton'
 const { Title, Text } = Typography
 
 const About = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const cvUrl = `${import.meta.env.BASE_URL}assets/${
+    (i18n.resolvedLanguage || i18n.language || '').startsWith('de')
+      ? 'Omer-Cetinadam-Lebenslauf.pdf'
+      : 'Omer-Cetinadam-Resume.pdf'
+  }`
 
   return (
     <motion.section
@@ -63,8 +67,8 @@ const About = () => {
           </Text>
         </div>
         <div className='about_buttons'>
-          <ShowCVButton cv={"/github-portfolio/assets/Omer-Cetinadam-Resume.pdf"} />
-          <DownloadButton cv={"/github-portfolio/assets/Omer-Cetinadam-Resume.pdf"} />
+          <ShowCVButton cv={cvUrl} />
+          <DownloadButton cv={cvUrl} />
         </div>
       </Card>
     </motion.section>

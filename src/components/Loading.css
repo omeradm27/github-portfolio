@@ -3,28 +3,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
   height: 100vh;
   background-color: #ffffff;
-  color: #333;
 }
 
 @media (prefers-color-scheme: dark) {
   .loading__wrapper {
-    background-color: #111827;
-    color: #d1d5db;
+    background-color: #0b1322;
   }
 }
 
-.loading__spinner {
-  width: 6rem;
-  height: 6rem;
-  border: 6px solid #2563eb; /* blue-600 */
-  border-top-color: transparent;
-  border-radius: 50%;
+.loading__signature {
+  animation: loading__fade 0.8s ease-out both;
 }
 
-.loading__text {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
+@keyframes loading__fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading__signature { animation: none; }
 }

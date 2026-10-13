@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import {
@@ -17,13 +17,16 @@ import {
   InfoCircleOutlined
 } from '@ant-design/icons'
 import './Projects.css'
-import { projectsData } from '../../data/projectData'
+import { getProjectsData } from '../../data/projectData'
 const { Title, Text, Paragraph } = Typography
 const { Meta } = Card
 
 export default function Projects() {
   const { t } = useTranslation()
-  const [selected, setSelected] = useState(null)
+  const [selectedKey, setSelectedKey] = useState(null)
+  const projectsData = getProjectsData(t)
+  // Look the project up on every render so the modal follows language changes.
+  const selected = projectsData.find((p) => p.key === selectedKey) || null
   return (
     <>
       <motion.section
@@ -40,15 +43,16 @@ export default function Projects() {
           </Title>
 
           <Row gutter={[24, 24]} justify="start" className="projects__grid">
-            {projectsData.map((proj, i) => (
-              <Col key={i} xs={24} sm={12} lg={8}>
+            {projectsData.map((proj) => (
+              <Col key={proj.key} xs={24} sm={12} lg={8}>
                 <Card
                   hoverable
                   className="projects__card-preview"
                   cover={
                     <img
                       alt={proj.title}
-                      src={"/github-portfolio/" + proj.logo}
+                      src={import.meta.env.BASE_URL + proj.logo}
+                      loading="lazy"
                       className="projects__cover"
                     />
                   }
@@ -81,7 +85,7 @@ export default function Projects() {
                       key="details"
                       type="text"
                       icon={<InfoCircleOutlined />}
-                      onClick={() => setSelected(proj)}
+                      onClick={() => setSelectedKey(proj.key)}
                     >
                       {t('PROJECTS_DETAIL')}
                     </Button>
@@ -101,39 +105,39 @@ export default function Projects() {
       <Modal
         open={!!selected}
         title={selected?.title}
-        onCancel={() => setSelected(null)}
+        onCancel={() => setSelectedKey(null)}
         footer={[
-          <Button key="close" onClick={() => setSelected(null)}>
-            Close
+          <Button key="close" onClick={() => setSelectedKey(null)}>
+            {t('PROJECTS_CLOSE')}
           </Button>
         ]}
         width={800}
       >
         {selected?.company && (
           <Paragraph>
-            <Text strong>Company:</Text> {selected.company}
+            <Text strong>{t('PROJECTS_LABEL_COMPANY')}:</Text> {selected.company}
           </Paragraph>
         )}
         {selected?.period && (
           <Paragraph>
-            <Text strong>Period:</Text> {selected.period}
+            <Text strong>{t('PROJECTS_LABEL_PERIOD')}:</Text> {selected.period}
           </Paragraph>
         )}
         <Paragraph>
-          <Text strong>Details:</Text>
+          <Text strong>{t('PROJECTS_LABEL_DETAILS')}:</Text>
         </Paragraph>
         <ul>
-          {selected?.details.map((d, idx) => (
+          {selected?.details?.map((d, idx) => (
             <li key={idx}>
               <Text>{d}</Text>
             </li>
           ))}
         </ul>
         <Paragraph>
-          <Text strong>Technologies:</Text>
+          <Text strong>{t('PROJECTS_LABEL_TECHNOLOGIES')}:</Text>
         </Paragraph>
         <Space wrap>
-          {selected?.technologies.map((tech, i) => (
+          {selected?.technologies?.map((tech, i) => (
             <Tag key={i}>{tech}</Tag>
           ))}
         </Space>

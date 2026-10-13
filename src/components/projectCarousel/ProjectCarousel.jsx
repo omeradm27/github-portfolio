@@ -41,12 +41,19 @@ const ProjectCarousel = ({ projects }) => {
         {grouped.map((group, idx) => (
           <div key={idx}>
             <Row gutter={[16, 16]} justify="center">
-              {group.map((proj, i) => (
-                <Col key={i} xs={22} sm={12} md={8}>
+              {group.map((proj) => (
+                <Col key={proj.key} xs={22} sm={12} md={8}>
                   <Card
                     hoverable
-                    cover={<img alt={proj.title} src={"/github-portfolio/" + proj.logo} className="carousel__image" />}
-                    onClick={() => window.open(proj.live || proj.github, '_blank')}
+                    cover={<img alt={proj.title} src={import.meta.env.BASE_URL + proj.logo} loading="lazy" className="carousel__image" />}
+                    onClick={() => {
+                      const url = proj.live || proj.github;
+                      if (url) {
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                      } else {
+                        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     <Meta title={proj.title} description={proj.period} />
                   </Card>

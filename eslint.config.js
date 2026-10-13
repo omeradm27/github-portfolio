@@ -23,11 +23,19 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // `motion` is only referenced as <motion.x> in JSX, which core no-unused-vars does not track.
+      'no-unused-vars': ['error', { varsIgnorePattern: '^([A-Z_]|motion$)' }],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    // Build/config files run in Node.
+    files: ['*.config.js'],
+    languageOptions: {
+      globals: { ...globals.node },
     },
   },
 ]
